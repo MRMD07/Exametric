@@ -13,11 +13,13 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeToggle from "./toggleTheme";
+import { getTheme } from "../theme/theme";
 
-const navItems = [ "Home", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources", "AI Tutor" ];
+const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources", "AI Tutor" ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("HOME");
 
   return (
     <>
@@ -32,7 +34,19 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
             {navItems.map((item) => (
-              <Button key={item} color="inherit">
+              <Button
+                key={item}
+                color="inherit"
+                onClick={() => setActive(item)}
+                sx={{
+                  borderColor: active === item ? `primary.main` : `transparent`,
+                  borderBottom: 5,
+                  borderStyle: "solid",
+                  "&:hover": {
+                    borderBottom: `2px solid primary.main`,
+                  },
+                }}
+              >
                 {item}
               </Button>
             ))}
