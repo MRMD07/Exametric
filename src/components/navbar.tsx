@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -19,6 +20,7 @@ const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources"
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("HOME");
+  const navigate = useNavigate();
 
   return (
     <>
@@ -36,7 +38,10 @@ export default function Navbar() {
               <Button
                 key={item}
                 color="inherit"
-                onClick={() => setActive(item)}
+                onClick={() => {
+                  setActive(item);
+                  navigate(`/${item.toLowerCase().replace(/\s+/g, '-')}`);
+                }}
                 sx={{
                   borderRadius: 0, 
                   // Make the entire borderBottom property conditional
@@ -78,7 +83,10 @@ export default function Navbar() {
               <ListItem key={item}>
                 <ListItemText primary={item}
                   color="inherit"
-                  onClick={() => setActive(item)}
+                  onClick={() => {
+                    setActive(item);
+                    navigate(`/${item.toLowerCase().replace(/\s+/g, '-')}`);
+                  }}
                   sx={{
                     borderRadius: 0, 
                     // Make the entire borderBottom property conditional
