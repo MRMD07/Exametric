@@ -13,7 +13,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeToggle from "./toggleTheme";
-import { getTheme } from "../theme/theme";
 
 const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources", "AI Tutor" ];
 
@@ -39,11 +38,16 @@ export default function Navbar() {
                 color="inherit"
                 onClick={() => setActive(item)}
                 sx={{
-                  borderColor: active === item ? `primary.main` : `transparent`,
-                  borderBottom: 5,
-                  borderStyle: "solid",
+                  borderRadius: 0, 
+                  // Make the entire borderBottom property conditional
+                  borderBottom: active === item 
+                    ? "5px solid" 
+                    : "5px solid transparent", 
+                  borderColor: active === item ? "primary.main" : "transparent",
                   "&:hover": {
-                    borderBottom: `2px solid primary.main`,
+                    // Ensure hover matches the active thickness to prevent "jumping"
+                    borderBottom: "5px solid",
+                    borderColor: "primary.main",
                   },
                 }}
               >
@@ -72,7 +76,18 @@ export default function Navbar() {
           <List>
             {navItems.map((item) => (
               <ListItem key={item}>
-                <ListItemText primary={item} />
+                <ListItemText primary={item}
+                  color="inherit"
+                  onClick={() => setActive(item)}
+                  sx={{
+                    borderRadius: 0, 
+                    // Make the entire borderBottom property conditional
+                    borderBottom: active === item 
+                      ? "5px solid" 
+                      : "5px solid transparent", 
+                    borderColor: active === item ? "primary.main" : "transparent"
+                  }}
+              />
               </ListItem>
             ))}
           </List>
