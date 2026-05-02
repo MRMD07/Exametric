@@ -1,6 +1,6 @@
 import ThemeToggle from "./toggleTheme";
 
-export default function Home() {
+export default function Navbar() {
   return (
     <>
       <ThemeToggle />
