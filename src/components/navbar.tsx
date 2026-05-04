@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeToggle from "./toggleTheme";
+import Logo from "./Logo";
 
 const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources", "AI Tutor" ];
 
@@ -26,11 +27,13 @@ export default function Navbar() {
     <>
       <AppBar position="static" color="transparent" elevation={4}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          
           {/* Left: Logo */}
-          <Typography onClick={() => navigate('/')} variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer", ml: {md: 2}}}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1, cursor: "pointer" }} onClick={() => navigate('/')}>
+          <Logo />
+          <Typography onClick={() => navigate('/')} variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer"}}>
             Olympiad Hub
           </Typography>
+          </Box>
 
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
