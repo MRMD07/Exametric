@@ -3,6 +3,8 @@ import {
   Button,
   Divider,
   Link,
+  List,
+  ListItem,
   Box,
   Stack
 } from "@mui/material";
@@ -87,6 +89,7 @@ export default function Home() {
                     {/* RIGHT SIDE */}
                     <Box
                         sx={{
+                            minWidth: { md: 200 },
                             width: { xs: "100%", md: 550 },
                             bgcolor: "background.paper",
                             color: "text.primary",
@@ -96,10 +99,11 @@ export default function Home() {
                             border: "1px solid",
                             borderColor: "divider",
                             mr: { xs: 0, md: 20 },
-                            minHeight: { md: 400 }, 
+                            maxHeight: { md: 600 }, 
                             display: 'flex',
                             flexDirection: 'column',
-                            justifyContent: 'center',
+                            justifyContent: 'flex-start',
+                            overflowY: 'auto',
                         }}
                     >
                         {/* Title */}
@@ -132,6 +136,34 @@ export default function Home() {
                             Final selections are made based on overall performance, and selected
                             students represent Pakistan in international Olympiads.
                         </Typography>
+
+                        <Typography 
+                            variant="h5" 
+                            component="h3" 
+                            gutterBottom 
+                            sx={{ mt: 3, fontWeight: 'medium' }}
+                        >
+                            Eligibility Criteria
+                        </Typography>
+
+                        {/* List Section */}
+                        <List sx={{ pl: 0 }}>
+                            {[
+                            { label: "1)", text: "Students of Matric OR F.Sc (Part-I), who scored an aggregate of 60% or more mark in Physics, Chemistry, Biology and Mathematics in last exam." },
+                            { label: "2)", text: "Students of O-Levels or A-Level (Part-I), who scored an aggregate of 60% or more mark in Physics, Chemistry, Biology and Mathematics in last exam." },
+                            { label: "3)", text: "Students who are currently studying in FSC(Part-II)/A- Level (Part-II) & university students are not eligible to apply." },
+                            { label: "4)", text: "Age less than 20 years on 30-06-2027." }
+                            ].map((item) => (
+                            <ListItem key={item.label} sx={{ alignItems: 'flex-start', px: 0, py: 0.5, mb: 0, }}>
+                                <Typography variant="body1" sx={{ mr: 1, fontWeight: 'bold', minWidth: '25px' }}>
+                                {item.label}
+                                </Typography>
+                                <Typography variant="body1" sx={{ color: 'text.primary' }}>
+                                {item.text}
+                                </Typography>
+                            </ListItem>
+                            ))}
+                        </List>
                     </Box>
                 </Box>
                  {/* Target section for scroll */}
