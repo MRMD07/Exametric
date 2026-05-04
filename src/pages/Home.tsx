@@ -33,7 +33,7 @@ export default function Home() {
                 }}
                 >
                     {/* LEFT SIDE */}
-                    <Box sx={{ maxWidth: 600, ml: { xs: 0, md: 25 } }}>
+                    <Box sx={{ maxWidth: 600, ml: { xs: 0, md: 25 }, }}>
                         <Typography
                         sx={{
                             typography: { xs: "h2", md: "h1" },
