@@ -7,6 +7,7 @@ import {
   Button,
   IconButton,
   Drawer,
+  Divider,
   Box,
   Stack,
   List,
@@ -92,6 +93,49 @@ export default function Home() {
                             Join WhatsApp Community
                         </Button>
                         </Stack>
+                    </Box>
+                    {/* RIGHT SIDE */}
+                    <Box
+                        sx={{
+                            width: { xs: "100%", md: 420 },
+                            bgcolor: "background.paper",
+                            color: "text.primary",
+                            p: 3,
+                            borderRadius: 4,
+                            boxShadow: 3,
+                            border: "1px solid",
+                            borderColor: "divider",
+                        }}
+                    >
+                        {/* Title */}
+                        <Typography variant="h6" sx={{ mb: 1 }}>
+                            NSTC Selection Process
+                        </Typography>
+
+                        <Divider sx={{ mb: 2 }} />
+
+                        {/* Content */}
+                        <Typography variant="body2" sx={{ mb: 2 }}>
+                            The National Science Talent Contest (NSTC) is conducted annually to
+                            identify and nurture talented students across Pakistan in various
+                            scientific disciplines.
+                        </Typography>
+
+                        <Typography variant="body2" sx={{ mb: 2 }}>
+                            Students initially register through their respective institutions and
+                            appear in a written examination that evaluates conceptual understanding
+                            and problem-solving skills.
+                        </Typography>
+
+                        <Typography variant="body2" sx={{ mb: 2 }}>
+                            Shortlisted candidates are invited to training camps, where they undergo
+                            rigorous academic preparation and further assessments.
+                        </Typography>
+
+                        <Typography variant="body2">
+                            Final selections are made based on overall performance, and selected
+                            students represent Pakistan in international Olympiads.
+                        </Typography>
                     </Box>
                 </Box>
                  {/* Target section for scroll */}
