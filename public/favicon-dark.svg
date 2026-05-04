@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100" height="100" style="color: white ">
+  <g transform="translate(60, 60)">
+    
+    <!-- Outer Hexagon -->
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+
+    <!-- Nodes -->
+    <circle cx="0" cy="-30" r="5" fill="currentColor"/>
+    <circle cx="26" cy="-15" r="5" fill="currentColor"/>
+    <circle cx="26" cy="15" r="5" fill="currentColor"/>
+    <circle cx="0" cy="30" r="5" fill="currentColor"/>
+    <circle cx="-26" cy="15" r="5" fill="currentColor"/>
+    <circle cx="-26" cy="-15" r="5" fill="currentColor"/>
+
+    <!-- Inner Connections -->
+    <line x1="0" y1="-30" x2="0" y2="30" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+    <line x1="-26" y1="-15" x2="26" y2="15" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+    <line x1="-26" y1="15" x2="26" y2="-15" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+
+    <!-- Core -->
+    <circle cx="0" cy="0" r="7" fill="currentColor"/>
+  </g>
+</svg>
