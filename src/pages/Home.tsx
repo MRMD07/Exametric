@@ -33,6 +33,7 @@ export default function Home() {
                 sx={{
                     px: { xs: 3, md: 8 },
                     py: { xs: 6, md: 10 },
+                    ml: { xs: 0, md: 18 },
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" },
                     alignItems: "center",
@@ -43,8 +44,8 @@ export default function Home() {
                     {/* LEFT SIDE */}
                     <Box sx={{ maxWidth: 600 }}>
                         <Typography
-                        variant="h2"
                         sx={{
+                            typography: { xs: "h2", md: "h1" },
                             mb: 3,
                             lineHeight: 1.1,
                         }}
@@ -52,7 +53,7 @@ export default function Home() {
                         OLYMPIAD <br /> HUB
                         </Typography>
 
-                        <Typography variant="h6" sx={{ mb: 4 }}>
+                        <Typography sx={{ mb: 4, typography: { xs: "h6", md: "h5" } }}>
                         NSTC Preparation. <br />
                         AI Assisted Learning. <br />
                         NSTC Syllabuses. <br />
