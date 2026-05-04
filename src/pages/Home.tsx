@@ -25,7 +25,6 @@ export default function Home() {
                 sx={{
                     px: { xs: 3, md: 8 },
                     py: { xs: 6, md: 10 },
-                    ml: { xs: 0, md: 28 },
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" },
                     alignItems: "center",
@@ -34,7 +33,7 @@ export default function Home() {
                 }}
                 >
                     {/* LEFT SIDE */}
-                    <Box sx={{ maxWidth: 600 }}>
+                    <Box sx={{ maxWidth: 600, ml: { xs: 0, md: 25 } }}>
                         <Typography
                         sx={{
                             typography: { xs: "h2", md: "h1" },
@@ -88,7 +87,7 @@ export default function Home() {
                     {/* RIGHT SIDE */}
                     <Box
                         sx={{
-                            width: { xs: "100%", md: 550 },
+                            width: { xs: "100%", sm: "80%", md: 550 },
                             bgcolor: "background.paper",
                             color: "text.primary",
                             p: {xs: 3, md: 5},
