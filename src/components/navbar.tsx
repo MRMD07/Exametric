@@ -28,7 +28,7 @@ export default function Navbar() {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           
           {/* Left: Logo */}
-          <Typography onClick={() => navigate('/')} variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer"}}>
+          <Typography onClick={() => navigate('/')} variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer", ml: {md: 2}}}>
             Olympiad Hub
           </Typography>
 
@@ -54,6 +54,7 @@ export default function Navbar() {
                     borderBottom: "5px solid",
                     borderColor: "primary.main",
                   },
+                  fontSize: "1.1rem",
                 }}
               >
                 {item}
