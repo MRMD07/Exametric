@@ -28,7 +28,7 @@ export default function Navbar() {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           
           {/* Left: Logo */}
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          <Typography onClick={() => navigate('/')} variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer"}}>
             Olympiad Hub
           </Typography>
 
