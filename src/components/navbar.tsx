@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="static" color="transparent" elevation={0}>
+      <AppBar position="static" color="transparent" elevation={4}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           
           {/* Left: Logo */}
