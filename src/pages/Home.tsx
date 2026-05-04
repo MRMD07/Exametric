@@ -40,7 +40,7 @@ export default function Home() {
                     gap: 6,
                 }}
                 >
-                {/* LEFT SIDE */}
+                    {/* LEFT SIDE */}
                     <Box sx={{ maxWidth: 600 }}>
                         <Typography
                         variant="h2"
@@ -67,8 +67,11 @@ export default function Home() {
                             variant="contained"
                             onClick={handleScroll}
                             sx={{
-                            borderRadius: "20px",
+                            borderRadius: "230px",
                             px: 3,
+                            "&:hover": {
+                                transform: "translateY(-1px)",
+                                }
                             }}
                         >
                             Start Preparing
