@@ -87,7 +87,7 @@ export default function Home() {
                     {/* RIGHT SIDE */}
                     <Box
                         sx={{
-                            width: { xs: "100%", sm: "80%", md: 550 },
+                            width: { xs: "100%", md: 550 },
                             bgcolor: "background.paper",
                             color: "text.primary",
                             p: {xs: 3, md: 5},
