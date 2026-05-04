@@ -1,6 +1,6 @@
 import { createContext, useMemo, useState } from 'react';
 import { getTheme } from './theme';
-import { ThemeProvider, CssBaseline } from '@mui/material';
+import { ThemeProvider, CssBaseline, GlobalStyles } from '@mui/material';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -28,6 +28,20 @@ export const ThemeContextProvider = ({ children }: any) => {
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
+                  <GlobalStyles
+                        styles={{
+                        "*::-webkit-scrollbar": {
+                            width: "8px",
+                        },
+                        "*::-webkit-scrollbar-track": {
+                            background: "transparent",
+                        },
+                        "*::-webkit-scrollbar-thumb": {
+                            backgroundColor: theme.palette.primary.main,
+                            borderRadius: "10px",
+                        },
+                        }}
+                    />
                 {children}
             </ThemeProvider>
         </ColorModeContext.Provider>
