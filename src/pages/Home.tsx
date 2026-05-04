@@ -1,24 +1,15 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import {
-  AppBar,
-  Toolbar,
   Typography,
   Button,
-  IconButton,
-  Drawer,
   Divider,
+  Link,
   Box,
-  Stack,
-  List,
-  ListItem,
-  ListItemText,
+  Stack
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import Navbar from "../components/navbar";
 
 export default function Home() {
-    const navigate = useNavigate();
+
     const handleScroll = () => {
         const section = document.getElementById("resources");
         if (section) {
@@ -34,7 +25,7 @@ export default function Home() {
                 sx={{
                     px: { xs: 3, md: 8 },
                     py: { xs: 6, md: 10 },
-                    ml: { xs: 0, md: 18 },
+                    ml: { xs: 0, md: 28 },
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" },
                     alignItems: "center",
@@ -97,18 +88,23 @@ export default function Home() {
                     {/* RIGHT SIDE */}
                     <Box
                         sx={{
-                            width: { xs: "100%", md: 420 },
+                            width: { xs: "100%", md: 550 },
                             bgcolor: "background.paper",
                             color: "text.primary",
-                            p: 3,
+                            p: {xs: 3, md: 5},
                             borderRadius: 4,
                             boxShadow: 3,
                             border: "1px solid",
                             borderColor: "divider",
+                            mr: { xs: 0, md: 20 },
+                            minHeight: { md: 400 }, 
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
                         }}
                     >
                         {/* Title */}
-                        <Typography variant="h6" sx={{ mb: 1 }}>
+                        <Typography variant="h4" sx={{ mb: 1 }}>
                             NSTC Selection Process
                         </Typography>
 
@@ -117,13 +113,14 @@ export default function Home() {
                         {/* Content */}
                         <Typography variant="body2" sx={{ mb: 2 }}>
                             The National Science Talent Contest (NSTC) is conducted annually to
-                            identify and nurture talented students across Pakistan in various
-                            scientific disciplines.
+                            identify and nurture talented students across Pakistan in subjects including
+                            Physics, Chemistry, Biology, and Mathematics.
                         </Typography>
 
                         <Typography variant="body2" sx={{ mb: 2 }}>
-                            Students initially register through their respective institutions and
-                            appear in a written examination that evaluates conceptual understanding
+                            Students initially register through the  
+                            official <Link href="https://stem.edu.pk/nstc/" target="_blank" underline="hover" sx={{ fontWeight: 'bold' }}>NSTC portal</Link> and 
+                            take a nation wide screen test that evaluates conceptual understanding
                             and problem-solving skills.
                         </Typography>
 
