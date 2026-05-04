@@ -2,6 +2,12 @@ import { createTheme } from "@mui/material/styles";
 
 export const getTheme = (mode: "light" | "dark") =>
   createTheme({
+    typography: {
+      fontFamily: "Oswald, sans-serif",
+      
+      body1: { fontFamily: "Inter, sans-serif" },
+      body2: { fontFamily: "Inter, sans-serif" },
+    },
     palette: {
       mode,
       ...(mode === "light"
