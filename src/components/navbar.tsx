@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -20,7 +20,8 @@ const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("HOME");
+  const location = useLocation();
+  const active = location.pathname;
   const navigate = useNavigate();
 
   return (
@@ -42,16 +43,15 @@ export default function Navbar() {
                 key={item}
                 color="inherit"
                 onClick={() => {
-                  setActive(item);
                   navigate(`/${item.toLowerCase().replace(/\s+/g, '-')}`);
                 }}
                 sx={{
                   borderRadius: 0, 
                   // Make the entire borderBottom property conditional
-                  borderBottom: active === item 
+                  borderBottom: active.startsWith(`/${item.toLowerCase().replace(/\s+/g, '-')}`)
                     ? "5px solid" 
                     : "5px solid transparent", 
-                  borderColor: active === item ? "primary.main" : "transparent",
+                  borderColor: active.startsWith(`/${item.toLowerCase().replace(/\s+/g, '-')}`) ? "primary.main" : "transparent",
                   "&:hover": {
                     // Ensure hover matches the active thickness to prevent "jumping"
                     borderBottom: "5px solid",
@@ -88,7 +88,6 @@ export default function Navbar() {
                 <ListItemText primary={item}
                   color="inherit"
                   onClick={() => {
-                    setActive(item);
                     navigate(`/${item.toLowerCase().replace(/\s+/g, '-')}`);
                   }}
                   sx={{
