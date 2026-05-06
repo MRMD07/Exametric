@@ -37,7 +37,7 @@ export default function Navbar() {
           </Box>
 
           {/* Desktop Menu */}
-          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2, mr: 4 }}>
             {navItems.map((item) => (
               <Button
                 key={item}
