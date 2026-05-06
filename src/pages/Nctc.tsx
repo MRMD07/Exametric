@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 
-export default function Nmtc(){
+export default function Nctc(){
     return(
         <>
             <Navbar/>
