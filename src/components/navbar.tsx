@@ -21,7 +21,7 @@ const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources"
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const active = location.pathname;
+  const active = location.pathname === "/" ? "/home" : location.pathname;
   const navigate = useNavigate();
 
   return (
