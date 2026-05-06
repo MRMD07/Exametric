@@ -93,10 +93,10 @@ export default function Navbar() {
                   sx={{
                     borderRadius: 0, 
                     // Make the entire borderBottom property conditional
-                    borderBottom: active === item 
+                    borderBottom: active.startsWith(`/${item.toLowerCase().replace(/\s+/g, '-')}`)
                       ? "5px solid" 
                       : "5px solid transparent", 
-                    borderColor: active === item ? "primary.main" : "transparent"
+                    borderColor: active.startsWith(`/${item.toLowerCase().replace(/\s+/g, '-')}`) ? "primary.main" : "transparent"
                   }}
               />
               </ListItem>
