@@ -10,3 +10,7 @@ Written in React and Typescript. Backend is written in [python](https://github.c
 1. React
 2. TypeScript
 3. Material UI (MUI) CSS
+
+---
+
+## 
