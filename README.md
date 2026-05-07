@@ -18,7 +18,9 @@ Written in React and Typescript. Backend is written in [python](https://github.c
 - Quality resources for preparation
 - AI based learning
 - Search feature to access resources
-- 
+- Resourcces from the community
+
+---
 
 ## Contribution
 
