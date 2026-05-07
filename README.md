@@ -6,3 +6,6 @@ Written in React and Typescript. Backend is written in [python](https://github.c
 ---
 
 ## Tech Stack
+
+1. React
+2. TypeScript
