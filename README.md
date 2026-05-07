@@ -13,6 +13,12 @@ Written in React and Typescript. Backend is written in [python](https://github.c
 
 ---
 
+## Contribution
+
+Any meaningful contributions are appreciated.
+
+---
+
 ## License
 
 This project is licensed under the MIT License.
