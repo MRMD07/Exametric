@@ -9,7 +9,7 @@ export default function Footer() {
         py: 2,
         backgroundColor: theme.palette.background.default,
         color: theme.palette.primary.main,
-        borderTop: `1px solid ${theme.palette.background.default}20`,
+        borderTop: `1px solid ${theme.palette.primary.main}20`,
       })}
     >
       <Container maxWidth="lg">
@@ -21,8 +21,8 @@ export default function Footer() {
             alignItems: "center",
           }}
         >
-          <Typography variant="body2">
-            © {new Date().getFullYear()} Your App Name
+          <Typography variant="body1">
+            © {new Date().getFullYear()} OlympiadHub-PK
           </Typography>
 
           <Stack direction="row" spacing={2}>
