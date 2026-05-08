@@ -7,8 +7,8 @@ export default function Footer() {
       sx={(theme) => ({
         mt: "auto",
         py: 2,
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.background.default,
+        backgroundColor: theme.palette.background.default,
+        color: theme.palette.primary.main,
         borderTop: `1px solid ${theme.palette.background.default}20`,
       })}
     >
