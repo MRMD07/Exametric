@@ -9,6 +9,7 @@ import {
   Stack
 } from "@mui/material";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer"
 
 export default function Home() {
 
@@ -181,6 +182,7 @@ export default function Home() {
                 </Box>
 
             </Box>
+            <Footer />
         </>
 
     )
