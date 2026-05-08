@@ -7,19 +7,19 @@ export default function Footer() {
       sx={(theme) => ({
         mt: "auto",
         py: 2,
-        backgroundColor: theme.palette.background.default,
-        color: theme.palette.primary.main,
-        borderTop: `1px solid ${theme.palette.primary.main}20`,
+        backgroundColor: "background.default",
+        color: "text.primary",
+        borderTop: `1px solid ${theme.palette.text.primary}20`,
       })}
     >
       <Container maxWidth="lg">
         <Box
           sx={{
-            display: "grid",
-            gridTemplateColumns: { xs: "1fr", md: "1fr auto 1fr"},
-            width: "100%",
-            gap: 2,
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
+            justifyContent: "space-between",
+            gap: 6,
           }}
         >
             {/* RIGHT SIDE */}
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* CENTER SECION */}
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{
                 textAlign: "center",
                 opacity: 0.9,
@@ -40,17 +40,21 @@ export default function Footer() {
           </Typography>
 
             {/* LEFT SIDE */}
-            <Box sx={{ justifySelf: {md: "end"} }}>
-                <Typography variant="body1" color="inherit">
-                    Contact us: 
-                </Typography>
+            <Box
+             sx={{ 
+                justifySelf: {md: "end"},
+                gap: 0.5,
+                alignItems: "center",
+                display: "flex"
+             }}
+            >
                 <Link
                     href="mailto:draftanddev@gmail.com"
                     underline="hover"
                     color="inherit"
                     target="_blank"
                 >
-                    draftanddev@gmail.com
+                    Contact us: draftanddev@gmail.com
                 </Link>
             </Box>
 
