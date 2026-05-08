@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Link, Stack } from "@mui/material";
+import { Box, Container, Typography, } from "@mui/material";
 
 export default function Footer() {
   return (
@@ -15,43 +15,33 @@ export default function Footer() {
       <Container maxWidth="lg">
         <Box
           sx={{
-            display: { md: "flex" },
-            flexWrap: "wrap",
-            justifyContent: "space-between",
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "1fr auto 1fr"},
+            width: "100%",
             gap: 2,
             alignItems: "center",
           }}
         >
             {/* RIGHT SIDE */}
-          <Typography variant="body1">
+          <Typography variant="body1" color="inherit">
             © {new Date().getFullYear()} OlympiadHub-PK
           </Typography>
+
+          {/* CENTER SECION */}
+          <Typography
+            variant="body2"
+            sx={{
+                textAlign: "center",
+                px: 2,
+            }}
+          >
+            This site is created for the sole purpose of education. We don't own any of these publicly available resources.
+          </Typography>
+
             {/* LEFT SIDE */}
-          <Stack direction="row" spacing={3}>
-            <Link
-              href="/privacy"
-              underline="hover"
-              color="inherit"
-            >
-              Privacy
-            </Link>
-
-            <Link
-              href="/terms"
-              underline="hover"
-              color="inherit"
-            >
-              Terms
-            </Link>
-
-            <Link
-              href="/contact"
-              underline="hover"
-              color="inherit"
-            >
-              Contact
-            </Link>
-          </Stack>
+          <Typography variant="body1" color="inherit">
+            Contact us: draftanddev@gmail.com
+          </Typography>
         </Box>
       </Container>
     </Box>
