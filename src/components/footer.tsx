@@ -13,19 +13,21 @@ export default function Footer() {
       })}
     >
       <Container maxWidth="lg">
-        <Stack
+        <Box
           sx={{
-            direction: { xs: "column", sm: "row" },
-            spacing: 1,
+            display: { md: "flex" },
+            flexWrap: "wrap",
             justifyContent: "space-between",
+            gap: 2,
             alignItems: "center",
           }}
         >
+            {/* RIGHT SIDE */}
           <Typography variant="body1">
             © {new Date().getFullYear()} OlympiadHub-PK
           </Typography>
-
-          <Stack direction="row" spacing={2}>
+            {/* LEFT SIDE */}
+          <Stack direction="row" spacing={3}>
             <Link
               href="/privacy"
               underline="hover"
@@ -50,7 +52,7 @@ export default function Footer() {
               Contact
             </Link>
           </Stack>
-        </Stack>
+        </Box>
       </Container>
     </Box>
   );
