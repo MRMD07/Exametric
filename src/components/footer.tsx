@@ -1,4 +1,4 @@
-import { Box, Container, Typography, } from "@mui/material";
+import { Box, Container, Typography, Link } from "@mui/material";
 
 export default function Footer() {
   return (
@@ -23,7 +23,7 @@ export default function Footer() {
           }}
         >
             {/* RIGHT SIDE */}
-          <Typography variant="body1" color="inherit">
+          <Typography variant="body1" color="inherit" sx={{ justifySelf: {md: "start"} }}>
             © {new Date().getFullYear()} OlympiadHub-PK
           </Typography>
 
@@ -32,6 +32,7 @@ export default function Footer() {
             variant="body2"
             sx={{
                 textAlign: "center",
+                opacity: 0.9,
                 px: 2,
             }}
           >
@@ -39,9 +40,20 @@ export default function Footer() {
           </Typography>
 
             {/* LEFT SIDE */}
-          <Typography variant="body1" color="inherit">
-            Contact us: draftanddev@gmail.com
-          </Typography>
+            <Box sx={{ justifySelf: {md: "end"} }}>
+                <Typography variant="body1" color="inherit">
+                    Contact us: 
+                </Typography>
+                <Link
+                    href="mailto:draftanddev@gmail.com"
+                    underline="hover"
+                    color="inherit"
+                    target="_blank"
+                >
+                    draftanddev@gmail.com
+                </Link>
+            </Box>
+
         </Box>
       </Container>
     </Box>
