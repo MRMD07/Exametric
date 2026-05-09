@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* CENTER SECION */}
           <Typography
-            variant="body1"
+            variant="body2"
             sx={{
               flex: "1 1 auto",
               textAlign: "center",
