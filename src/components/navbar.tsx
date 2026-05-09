@@ -27,17 +27,30 @@ export default function Navbar() {
   return (
     <>
       <AppBar position="static" color="transparent" elevation={4}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           {/* Left: Logo */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1, cursor: "pointer" }} onClick={() => navigate('/')}>
-          <Logo />
-          <Typography onClick={() => navigate('/')} variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer"}}>
-            Olympiad Hub
-          </Typography>
+          <Box
+            sx={{
+              flex: 1,
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1, cursor: "pointer" }} onClick={() => navigate('/')}>
+              <Logo />
+              <Typography variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer"}}>
+                Olympiad Hub
+              </Typography>
+            </Box>
           </Box>
 
           {/* Desktop Menu */}
-          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2, mr: 4 }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2, justifyContent: "center" }}>
             {navItems.map((item) => (
               <Button
                 key={item}
@@ -66,7 +79,14 @@ export default function Navbar() {
           </Box>
 
           {/* Right: Toggle + Mobile Menu */}
-          <Box>
+          <Box
+              sx={{
+                flex: 1,
+                display: "flex",
+                justifyContent: "flex-end",
+                alignItems: "center",
+              }}
+          >
             <ThemeToggle />
 
             <IconButton
