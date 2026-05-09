@@ -16,7 +16,10 @@ export default function Nmtc(){
                 color: "text.primary",
             }}
             >
+                    {/* Navbar */}
                 <Navbar/>
+
+                    {/* Main Content */}
                 <SubjectPageLayout 
                     title="National Mathematics Talent Contest (NMTC)"
                     guide="The National Mathematics Talent Contest (NMTC) is a prestigious mathematics competition held in Pakistan. It serves as a platform for students to showcase their mathematical skills and compete at a national level. The NMTC is organized by the Pakistan Mathematical Society and is open to students from various educational levels, including primary, secondary, and higher secondary schools."
@@ -26,6 +29,8 @@ export default function Nmtc(){
                         { label: "Registration", content: "/nmtc/registration" },
                     ]}
                 />
+
+                    {/* Footer */}
                 <Footer/>
             </Box>
         </>
