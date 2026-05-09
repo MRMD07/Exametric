@@ -19,11 +19,20 @@ export default function Footer() {
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
-            gap: 6,
+            gap: 3,
+            width: "100%",
+            flexWrap: "nowrap", 
           }}
         >
             {/* RIGHT SIDE */}
-          <Typography variant="body1" color="inherit" sx={{ justifySelf: {md: "start"} }}>
+          <Typography
+            variant="body1"
+            color="inherit"
+            sx={{
+              flex: 1,
+              whiteSpace: "nowrap",
+            }}
+          >
             © {new Date().getFullYear()} OlympiadHub-PK
           </Typography>
 
@@ -31,32 +40,32 @@ export default function Footer() {
           <Typography
             variant="body1"
             sx={{
-                textAlign: "center",
-                opacity: 0.9,
-                px: 2,
+              flex: 2,
+              textAlign: "center",
+              opacity: 0.9,
             }}
           >
             This site is created for the sole purpose of education. We don't own any of these publicly available resources.
           </Typography>
 
-            {/* LEFT SIDE */}
-            <Box
-             sx={{ 
-                justifySelf: {md: "end"},
-                gap: 0.5,
-                alignItems: "center",
-                display: "flex"
-             }}
+            {/* RIGHT SIDE */}
+          <Box
+            sx={{
+              flex: 1,
+              display: "flex",
+              justifyContent: "flex-end",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <Link
+              href="mailto:draftanddev@gmail.com"
+              underline="hover"
+              color="inherit"
+              target="_blank"
             >
-                <Link
-                    href="mailto:draftanddev@gmail.com"
-                    underline="hover"
-                    color="inherit"
-                    target="_blank"
-                >
-                    Contact us: draftanddev@gmail.com
-                </Link>
-            </Box>
+              Contact us: draftanddev@gmail.com
+            </Link>
+          </Box>
 
         </Box>
       </Container>
