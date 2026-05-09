@@ -40,12 +40,13 @@ export default function Footer() {
           <Typography
             variant="body1"
             sx={{
-              flex: 2,
+              flex: "1 1 auto",
               textAlign: "center",
               opacity: 0.9,
+              px: { xs: 0, md: 3 },
             }}
           >
-            This site is created for the sole purpose of education. We don't own any of these publicly available resources.
+            This site is as independent initiative. All materials are sourced from public domains and are intended for educational purposes only. We do not claim ownership of any content and respect all copyrights.
           </Typography>
 
             {/* RIGHT SIDE */}
