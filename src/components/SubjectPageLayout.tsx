@@ -72,7 +72,10 @@ export default function SubjectPageLayout({
         direction="row"
         spacing={2}
         sx={{
-            flexWrap: "wrap"
+            flexWrap: "wrap",
+            justifyContent: "center",
+            width: "100%",            
+            px: 2, 
         }}
         useFlexGap
       >
