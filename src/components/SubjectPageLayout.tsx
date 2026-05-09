@@ -65,7 +65,7 @@ export default function SubjectPageLayout({
       </Paper>
 
       {/* RESOURCE BUTTONS */}
-      <Typography variant="h5" sx={{ mb: 2 }}>
+      <Typography variant="h4" sx={{ mb: 2 }}>
         Resources
       </Typography>
       <Stack
