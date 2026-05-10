@@ -19,8 +19,8 @@ export default function Nmtc(){
                     {/* Navbar */}
                 <Navbar/>
 
-                <Box>
                     {/* Main Content */}
+                <Box>
                     <SubjectPageLayout 
                         title="National Mathematics Talent Contest (NMTC)"
                         guide= { expertGuide }
