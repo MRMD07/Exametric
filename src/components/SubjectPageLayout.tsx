@@ -55,6 +55,7 @@ export default function SubjectPageLayout({
           borderRadius: 5,
           minHeight: "fit-content",
           maxHeight: 500,
+          overflowX: "hidden",
           overflowY: "auto",
           mb: 5,
         }}
