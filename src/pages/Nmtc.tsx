@@ -19,10 +19,11 @@ export default function Nmtc(){
                     {/* Navbar */}
                 <Navbar/>
 
+                <Box>
                     {/* Main Content */}
-                <SubjectPageLayout 
-                    title="National Mathematics Talent Contest (NMTC)"
-                    guide="
+                    <SubjectPageLayout 
+                        title="National Mathematics Talent Contest (NMTC)"
+                        guide="
 <p><strong>NMTC GUIDE IS WRITTEN BY AHMED RAZA</strong></p>
 <p><em>Note: The guide has been reviewed by the Deputy Leader of Switzerland, Tanish Patel, and the Deputy Leader of Algeria, Maya Chouikrat.</em></p>
 <p>Also note that this page exists to guide you from having no experience to being able to get selected for IMO. However, to aim for a medal, you will need to go beyond this guide and work out what works best for you.</p>
@@ -398,7 +399,8 @@ export default function Nmtc(){
                         { label: "Syllabus", content: "/nmtc/syllabus" },
                         { label: "Registration", content: "/nmtc/registration" },
                     ]}
-                />
+                    />
+                </Box>
 
                     {/* Footer */}
                 <Footer/>
