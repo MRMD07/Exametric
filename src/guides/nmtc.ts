@@ -203,7 +203,11 @@ export const expertGuide = `
 <p>After exiting the room after the second day of exam, leave the exam and thoughts related to it inside the room. It is very possible that you did not do as good as you had hoped for. The worst thought you can have at that moment is that you failed your country. You made your place fair and square and you have nothing left to prove to anyone. Your score should not affect you. Obviously such a scenario will hurt, and that is normal human behavior. Learning to come to terms with those feelings is important.</p>
 
 <h3>Redoing the IMO</h3>
-<p>I have gone through some previous results of the Olympiad (Team Pakistan), and realized that most of them improved their scores and even won a medal after redoing IMO. This means, if you qualify once and are unable to win anything, you can have another go at it! Of course you need to be eligible to participate which is why starting early is beneficial.</p>
+<p>I have gone through some previous results of the Olympiad (Team Pakistan), and realized that most of them improved their scores and even won a medal after redoing IMO. This means, if you qualify once and are unable to win anything, you can have another go at it! Of course you need to be eligible to participate which is why starting early is beneficial.There are rumors that the most consistent gold winning teams prepare since they are young and countries like China have contestants bagging a gold at the age of around 14-15. 
+
+Redoing the whole process with the ideal objective achieved prior to the three week camp means you are now fully ready to either complete the books (if you haven't) and solving the problems (there are always problems available). The more the merrier.
+
+GOOD LUCK!</p>
 
 <hr>
 `
