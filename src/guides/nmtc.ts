@@ -19,7 +19,7 @@ export const expertGuide = `
     <li>You have to be less than 20 years of age on 30th June of the competition. (Therefore, for example, to participate in IMO 2025, you have to be less than 20 years old on 30th June 2025)</li>
     <li>Current students of 9th, 10th, 11th (Matric/O-Level) or FSC-1/AS can register for it, but A2 students can also register if they are eligible according to (i) and take a gap year.</li>
 </ul>
-<p><a href='#'>Click here to access their website</a></p>
+<p>check the <strong>"Register"</strong> button below</p>
 
 <hr>
 
@@ -71,7 +71,7 @@ export const expertGuide = `
 
 <p>It is also important to note that, if you seriously want to get into the IMO team, or better yet, an IMO medal, you need to start dedicating multiple hours a day daily till the actual competition. This does not mean that you need to make Olympiad Mathematics your personality. It goes without saying that your best chances are if you work in moderation.</p>
 
-<p>Before reading the specifics of each subject, it might be beneficial to be aware of what to expect when studying them. The following unofficial syllabus will be able to help with that: <a href='#'>Unofficial Syllabus in math olympiads</a>.</p>
+<p>Before reading the specifics of each subject, it might be beneficial to be aware of what to expect when studying them. The following unofficial syllabus will be able to help with that: (<strong>Syllabus</strong> button below).</p>
 
 <h3>Geometry</h3>
 <p>For Geometry, the following book would be enough for pretty much anything you will need to know for Olympiad Mathematics. The first four chapters cover everything that might be tested on the initial screening test and any subsequent selection test, though not sufficient enough for IMO:</p>
@@ -208,6 +208,12 @@ export const expertGuide = `
 Redoing the whole process with the ideal objective achieved prior to the three week camp means you are now fully ready to either complete the books (if you haven't) and solving the problems (there are always problems available). The more the merrier.
 
 GOOD LUCK!</p>
+
+<h3>Contact</h3>
+
+<p>For further queries or additional help, you may reach me out at the following socials:
+
+Gmail - ahmedrazamusani@gmail.com </p>
 
 <hr>
 `
