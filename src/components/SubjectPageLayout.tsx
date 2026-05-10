@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import {
   Box,
   Typography,
@@ -24,7 +23,6 @@ export default function SubjectPageLayout({
   guide,
   resources,
 }: SubjectPageLayoutProps) {
-    const navigate = useNavigate();
 
   return (
     <Box
@@ -84,7 +82,7 @@ export default function SubjectPageLayout({
         {resources.map((resource, index) => (
           <Button
             key={resource.label}
-            onClick={() => navigate(resource.content)}
+            href={resource.content}
             variant={index === 0 ? "contained" : "outlined"}
             sx={{
               borderRadius: "999px",
