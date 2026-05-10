@@ -18,7 +18,8 @@ export default function Nbtc(){
                 <Navbar/>
 
                     {/* Main Content */}
-                
+                <Box>
+                </Box>
 
                     {/* Footer */}
                 <Footer/>
