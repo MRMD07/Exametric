@@ -18,7 +18,8 @@ export default function Nptc(){
                 <Navbar/>
 
                     {/* Main Content */}
-                
+                <Box>
+                </Box>
 
                     {/* Footer */}
                 <Footer/>
