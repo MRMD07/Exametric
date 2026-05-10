@@ -90,6 +90,9 @@ export default function SubjectPageLayout({
               borderRadius: "999px",
               px: 4,
               minWidth: 140,
+              '&:hover':{
+                transform: "translateY(-1px)",
+              }
             }}
           >
             {resource.label}
