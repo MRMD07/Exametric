@@ -59,9 +59,10 @@ export default function SubjectPageLayout({
           mb: 5,
         }}
       >
-        <Typography variant="body1">
-          {guide}
-        </Typography>
+        <Typography
+         variant="body1"
+         dangerouslySetInnerHTML={{ __html: guide}} 
+        />
       </Paper>
 
       {/* RESOURCE BUTTONS */}
