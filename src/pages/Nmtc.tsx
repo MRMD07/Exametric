@@ -26,8 +26,8 @@ export default function Nmtc(){
                         guide= { expertGuide }
                     resources={[
                         { label: "Past Papers", content: "/nmtc/past-papers" },
-                        { label: "Syllabus", content: "/nmtc/syllabus" },
-                        { label: "Registration", content: "/nmtc/registration" },
+                        { label: "Syllabus", content: "https://drive.google.com/file/d/14f91euSH5gd5k7c8ciW88R5-zB7Uq3YQ/view" },
+                        { label: "Registration", content: "https://stem.edu.pk/nstc/" },
                     ]}
                     />
                 </Box>
