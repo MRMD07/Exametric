@@ -83,6 +83,7 @@ export default function SubjectPageLayout({
           <Button
             key={resource.label}
             href={resource.content}
+            target="_blank"
             variant={index === 0 ? "contained" : "outlined"}
             sx={{
               borderRadius: "999px",
