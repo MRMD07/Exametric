@@ -86,22 +86,22 @@ export const expertGuide = `
 <ul>
     <li>A less detailed but great guide by Humayl Aslam (IPhO ‘21) and the IPhO ‘21 team: guide to IPhO through NPTC</li>
     <li>A short guide for the initial screening test by Osman Siddique (IPhO ‘21): NPTC Screening Test Short Prep Guide</li>
-    <li>Kevin Zhou (USA Team Coach) has written a great guide for starting your IPhO prep: <a href="<https://knzhou.github.io/writing/Advice.pdf>" target="_blank"><https://knzhou.github.io/writing/Advice.pdf></a></li>
+    <li>Kevin Zhou (USA Team Coach) has written a great guide for starting your IPhO prep: <a href="https://knzhou.github.io/writing/Advice.pdf" target="_blank"><https://knzhou.github.io/writing/Advice.pdf></a></li>
 </ul>
 
 <h3>Resource Bank</h3>
 <ul>
-    <li><strong>Drive with useful resources:</strong> <a href="<https://drive.google.com/drive/u/1/folders/10h6RwSopzdbV2UviovnaimqmlgZ9SJNc>" target="_blank">Google Drive Link</a></li>
-    <li><strong>NSTC Past exams:</strong> <a href="<https://drive.google.com/drive/u/1/folders/1X96nTrTsou9V-QP1kPlAPYLWHO0GBGgE>" target="_blank">NSTC Past Exams Folder</a></li>
-    <li><strong>Kevin Zhou Handouts:</strong> <a href="<https://knzhou.github.io/>" target="_blank"><https://knzhou.github.io/></a></li>
-    <li><strong>Kalda Handouts:</strong> <a href="<https://www.ioc.ee/~kalda/ipho/>" target="_blank"><https://www.ioc.ee/~kalda/ipho/></a></li>
-    <li><strong>Kalda Solutions:</strong> <a href="<https://physoly.tech/kalda/>" target="_blank"><https://physoly.tech/kalda/></a></li>
-    <li><strong>USAPhO past exams:</strong> <a href="<https://www.aapt.org/Common2022/pastexams.cfm>" target="_blank">AAPT USAPhO Past Exams</a></li>
-    <li><strong>IPhO past exams:</strong> <a href="<https://ipho.olimpicos.net/>" target="_blank"><https://ipho.olimpicos.net/></a></li>
-    <li><strong>EuPhO past exams:</strong> <a href="<https://eupho.olimpicos.net/>" target="_blank"><https://eupho.olimpicos.net/></a></li>
-    <li><strong>APhO past exams:</strong> <a href="<https://apho.olimpicos.net/>" target="_blank"><https://apho.olimpicos.net/></a></li>
-    <li><strong>MIT OCW:</strong> <a href="<https://ocw.mit.edu/>" target="_blank"><https://ocw.mit.edu/></a></li>
-    <li><strong>YouTube Playlist 1:</strong> <a href="<https://www.youtube.com/watch?v=KOKnWaLiL8w&list=PLFE3074A4CB751B2B>" target="_blank">Watch Here</a></li>
-    <li><strong>YouTube Playlist 2:</strong> <a href="<https://www.youtube.com/watch?v=NK-BxowMIfg&list=PLD07B2225BB40E582>" target="_blank">Watch Here</a></li>
+    <li><strong>Drive with useful resources:</strong> <a href="https://drive.google.com/drive/u/1/folders/10h6RwSopzdbV2UviovnaimqmlgZ9SJNc" target="_blank">Google Drive Link</a></li>
+    <li><strong>NSTC Past exams:</strong> <a href="https://drive.google.com/drive/u/1/folders/1X96nTrTsou9V-QP1kPlAPYLWHO0GBGgE" target="_blank">NSTC Past Exams Folder</a></li>
+    <li><strong>Kevin Zhou Handouts:</strong> <a href="https://knzhou.github.io/" target="_blank">https://knzhou.github.io/</a></li>
+    <li><strong>Kalda Handouts:</strong> <a href="https://www.ioc.ee/~kalda/ipho/" target="_blank">https://www.ioc.ee/~kalda/ipho/</a></li>
+    <li><strong>Kalda Solutions:</strong> <a href="https://physoly.tech/kalda/" target="_blank">https://physoly.tech/kalda/</a></li>
+    <li><strong>USAPhO past exams:</strong> <a href="https://www.aapt.org/Common2022/pastexams.cfm" target="_blank">AAPT USAPhO Past Exams</a></li>
+    <li><strong>IPhO past exams:</strong> <a href="https://ipho.olimpicos.net/" target="_blank">https://ipho.olimpicos.net/</a></li>
+    <li><strong>EuPhO past exams:</strong> <a href="https://eupho.olimpicos.net/" target="_blank">https://eupho.olimpicos.net/</a></li>
+    <li><strong>APhO past exams:</strong> <a href="https://apho.olimpicos.net/" target="_blank">https://apho.olimpicos.net/</a></li>
+    <li><strong>MIT OCW:</strong> <a href="https://ocw.mit.edu/" target="_blank">https://ocw.mit.edu/</a></li>
+    <li><strong>YouTube Playlist 1:</strong> <a href="https://www.youtube.com/watch?v=KOKnWaLiL8w&list=PLFE3074A4CB751B2B" target="_blank">Watch Here</a></li>
+    <li><strong>YouTube Playlist 2:</strong> <a href="https://www.youtube.com/watch?v=NK-BxowMIfg&list=PLD07B2225BB40E582" target="_blank">Watch Here</a></li>
 </ul>
 `
