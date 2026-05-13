@@ -26,7 +26,7 @@ export default function Nctc(){
                         guide= { expertGuide }
                     resources={[
                         { label: "Past Papers", content: "https://drive.google.com/drive/folders/1IYY-Q0yAL9OS89fh_CA0VhgMZuhHVpWV?usp=drive_link" },
-                        { label: "Additional Resources", content: "https://drive.google.com/drive/folders/1sCxZnxY9KuXTyEEzchQ6v0Pl6JKsXumu" },
+                        { label: "Study Material", content: "https://drive.google.com/drive/folders/1sCxZnxY9KuXTyEEzchQ6v0Pl6JKsXumu" },
                     ]}                    
                     />
                 </Box>
