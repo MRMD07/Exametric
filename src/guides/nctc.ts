@@ -1,0 +1,68 @@
+export const expertGuide = `
+<h2>GUIDE FOR NCTC</h2>
+<p>This guide is written by Abdul Rafay (Bronze Medal IChO'24, H.M IChO'23) and reviewed by the IChO 2024 and 2025 Team.</p>
+<p>It is meant to guide you through the selection process for the International Chemistry Olympiad team in Pakistan and help you achieve at least a bronze medal. As always, if you have any questions or want to suggest an improvement, please feel free to reach out to me through my email <a href="mailto:abdulrafay4585@gmail.com">abdulrafay4585@gmail.com</a> or LinkedIn.</p>
+
+<h3>Stages of the Selection Process:</h3>
+
+<h4>Stage 1- National Science Talent Contest (June-July):</h4>
+<p>The National Science Talent Contest (NSTC) is a screening test to screen potential candidates for the International Olympiads of the following year. For example, the screening test for IChO 2026 in Uzbekistan was held in July 2025. To participate in this screening test, you must be under 20 years of age on June 30th of the competition year. As an example, to participate in IChO 2027, you must be under 20 years old on June 30th, 2027. Another eligibility criterion is that you must be a student of Matric/O’level or FSC-1/AS and must not be attending university at the time of the Olympiad. FSC-2 &amp; A2 students who intend to take a gap year can also register for NSTC as long as they meet the age requirements. You can choose to participate in any one of the subjects out of Chemistry, Mathematics, Physics, and Biology. Historically, chemistry usually gets the lowest registration among all other subjects, so you may consider appearing for it if you don’t have any other preference.</p>
+
+<h4>Stage 2- 1st Training Camp (September- October):</h4>
+<p>Each year, around the top 50 performing students in NSTC qualify for the National Chemistry Talent Contest (NCTC) and are invited to a fully funded trip to the PIEAS, Islamabad. This training camp is usually a week long, and at the end of it, there is a theoretical test, usually based on the content taught during the camp. On the basis of the test, ~ 15 students are chosen for the second round.</p>
+
+<h4>Stage 3- 2nd Training Camp (November- February):</h4>
+<p>The second training camp is usually divided into two parts: the online camp over Zoom from November to mid-February, followed by the physical camp in Karachi at the end of February. During these extensive camps, the contestants are taught organic, inorganic, analytical and physical chemistry to an undergraduate level. There are weekly tests in the online classes, whereas the physical camp ends with a grand test. The combined results from both online and physical phases are used to select the Top 4 students to represent Pakistan in the International Chemistry Olympiad.</p>
+
+<h4>Stage 4: 3rd Training camp (April- July)</h4>
+<p>The final 4 students are then called for a month-long physical training camp in Karachi.</p>
+
+<hr>
+
+<h3>Preparation Guide for National Science Talent Contest:</h3>
+<p>The chemistry portion of the National Science Talent Contest is based on the FSc/Inter chemistry textbooks. For students of O-level or Grade 9/10, it is advisable to go over the A-level and FSc chemistry textbooks when preparing for the competition. Needless to say, all the participants are expected to have acquired the knowledge up to the FSc level. With a solid understanding of basic chemistry concepts and some problem-solving skills, it should not be too difficult to qualify for the first round of the National Chemistry Talent Contest.</p>
+
+<h4>Exam Structure:</h4>
+<p>The screening test is divided into three sections:</p>
+<ul>
+    <li><strong>Section A:</strong> 20 MCQs from General Science</li>
+    <li><strong>Section B:</strong> 50 MCQs from Chemistry</li>
+    <li><strong>Section C:</strong> 3 long descriptive questions</li>
+</ul>
+
+<h4>Marking:</h4>
+<p>The test is worth 100 marks, with each correct MCQ answer awarding 1 mark, and 1/3 of a mark being deducted for an incorrect MCQ answer. The descriptive questions carry a total of 30 marks.</p>
+
+<h4>Resources</h4>
+<ul>
+    <li>The NSTC past papers are available here: NSTC-19 Papers</li>
+    <li>US National Chemistry Olympiad (USNCO) State-round past papers*</li>
+    <li>Australian National Chemistry Olympiad (AChO)*</li>
+</ul>
+<p><em>*Both of these are about the same difficulty level as the NSTC test</em></p>
+
+<hr>
+
+<h3>Preparation Guide for 1st National Chemistry Talent Contest:</h3>
+<p>The main aim of the first training camp of NCTC is to screen students with a strong grasp of high school chemistry concepts for the later stages. Therefore, if you are one of the lucky students to make it to the Top 50 students, start preparing for the first camp much earlier than the actual camp. You should focus on solidifying the chemistry basics from the Federal Board Chemistry books. During the first camp, you will have a hectic and packed schedule with daily tests, so there will be very little time for self-study.</p>
+<p>Since the grand test is based on the content delivered during the lecture, you can easily qualify for the second training camp by simply focusing on the classes, provided that your grasp of basic chemistry concepts is strong.</p>
+
+<hr>
+
+<h3>Preparation Guide for 2nd National Chemistry Talent Contest</h3>
+<p><em>(aka how to make the Pakistan National Team for IChO)</em></p>
+<p>The online phase of the second training camp will start soon after the first camp is over, and it will feature daily online classes in the evening with weekly tests for three straight months. The second training camp is the time when you will be formally introduced to the Olympiad Chemistry, and you will notice the shift from high school chemistry to undergraduate chemistry.</p>
+
+<p>Technically, Olympiad Chemistry is split into four different streams: Organic Chemistry, Physical Chemistry, Analytical Chemistry, and Inorganic Chemistry. You will also be challenged by time management, as the NCTC classes/tests will eat a significant portion of your study time. If you are from A levels, then you will especially be challenged by organic chemistry, as it will take a significant amount of effort to get the basics of organic chemistry right. Unlike the first camp tests, the weekly tests of the second camp may examine stuff that is not covered in the classes. This is deliberate to check the students’ capability to answer the questions covering the concepts that they may not have studied before; the purpose is to prepare students for the IChO.</p>
+
+<p>Unfortunately, the checked answer scripts of the second camp are not returned to the students, so there is no way for you to know your performance in the camp.</p>
+
+<p>The online phase of NCTC usually ends in mid-February. Depending on the circumstances, it could be followed by a week-long physical camp at ICCBS, University of Karachi. This physical camp will end with the grand test covering the extensive topics covered in both online and physical camps. The cumulative scores of all the weekly online tests, the daily tests in the physical camp and the grand tests are used to decide the top four students that will represent Pakistan at the IChO. The results of the second camp are usually announced at the end of April, a few camps after the physical camp has ended.</p>
+
+<p>I have been saying this many times that the key to success in the second camp is <strong>CONSISTENCY</strong>. If you manage to focus on the weekly online classes for a period of three to four months, take the time out for the test preparation and do well in the tests- all that while juggling through your school studies, your uni application- then there is a high chance that you may make it to the Top 4 students. It goes without saying that in a camp with the top 15 students of a country, the competition is going to be fairly high, which means you cannot afford to slack off or take things lightly. Every class, every test, and every hour of study counts.</p>
+
+<h4>Additional Resources</h4>
+<ul>
+    <li><a href="https://drive.google.com/drive/folders/1sCxZnxY9KuXTyEEzchQ6v0Pl6JKsXumu" target="_blank">Past IChO exams and useful olympiad chemistry books by Ali Abdullah (IChO 2025)</a></li>
+</ul>
+`
