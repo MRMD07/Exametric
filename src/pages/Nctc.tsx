@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
+import SubjectPageLayout from "../components/SubjectPageLayout";
+import { expertGuide } from "../guides/nbtc";
 
 export default function Nctc(){
     return(
