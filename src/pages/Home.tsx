@@ -56,7 +56,7 @@ export default function Home() {
                                 lineHeight: 1.1,
                             }}
                             >
-                            OLYMPIAD <br /> HUB
+                            EXAMETRIC
                             </Typography>
 
                             <Typography sx={{ mb: 4, typography: { xs: "h6", md: "h5" } }}>
