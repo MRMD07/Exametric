@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import SubjectPageLayout from "../components/SubjectPageLayout";
-import { expertGuide } from "../guides/nbtc";
+import { expertGuide } from "../guides/nctc";
 
 export default function Nctc(){
     return(
@@ -26,7 +26,7 @@ export default function Nctc(){
                         guide= { expertGuide }
                     resources={[
                         { label: "Past Papers", content: "https://drive.google.com/drive/folders/1IYY-Q0yAL9OS89fh_CA0VhgMZuhHVpWV?usp=drive_link" },
-                        { label: "Syllabus", content: "https://drive.google.com/file/d/14f91euSH5gd5k7c8ciW88R5-zB7Uq3YQ/view" },
+                        { label: "Additional Resources", content: "https://drive.google.com/drive/folders/1sCxZnxY9KuXTyEEzchQ6v0Pl6JKsXumu" },
                     ]}                    
                     />
                 </Box>
