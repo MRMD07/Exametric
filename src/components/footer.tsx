@@ -19,12 +19,13 @@ export default function Footer() {
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
-            gap: 3,
+            gap: 5,
+            ml: { md: "2.5rem" },
             width: "100%",
             flexWrap: "nowrap", 
           }}
         >
-            {/* RIGHT SIDE */}
+            {/* LEFT SIDE */}
           <Typography
             variant="body1"
             color="inherit"
