@@ -22,7 +22,7 @@ export default function Nbtc(){
                     {/* Main Content */}
                 <Box>
                     <SubjectPageLayout 
-                        title="National Biology Talent Contest (NMTC)"
+                        title="National Biology Talent Contest (NBTC)"
                         guide= { expertGuide }
                     resources={[
                         { label: "Past Papers", content: "/nmtc/past-papers" },
