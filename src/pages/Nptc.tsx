@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import SubjectPageLayout from "../components/SubjectPageLayout";
-import { expertGuide } from "../guides/nmtc";
+import { expertGuide } from "../guides/nptc";
 
 export default function Nptc(){
     return(
@@ -21,6 +21,14 @@ export default function Nptc(){
 
                     {/* Main Content */}
                 <Box>
+                    <SubjectPageLayout 
+                        title="National Physics Talent Contest (NPTC)"
+                        guide= { expertGuide }
+                    resources={[
+                        { label: "Past Papers", content: "https://drive.google.com/drive/folders/1IYY-Q0yAL9OS89fh_CA0VhgMZuhHVpWV?usp=drive_link" },
+                        { label: "Syllabus", content: "https://drive.google.com/file/d/14f91euSH5gd5k7c8ciW88R5-zB7Uq3YQ/view" },
+                    ]}
+                    />
                 </Box>
 
                     {/* Footer */}
