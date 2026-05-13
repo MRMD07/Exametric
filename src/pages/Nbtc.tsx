@@ -26,7 +26,7 @@ export default function Nbtc(){
                         guide= { expertGuide }
                     resources={[
                         { label: "Past Papers", content: "https://drive.google.com/drive/folders/1-VudsX4-ySQ_bJVmDXxfH4F0L4ZntbkN?usp=drive_link" },
-                        { label: "Syllabus", content: "syllabus/placeholder" },
+                        { label: "Books", content: "https://drive.google.com/drive/folders/1745To0zPDw1Pb4KiBGzjIZxO0Z7UFzTk" },
                     ]}
                     />
                 </Box>
