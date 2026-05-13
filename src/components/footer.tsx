@@ -33,7 +33,7 @@ export default function Footer() {
               whiteSpace: "nowrap",
             }}
           >
-            © {new Date().getFullYear()} OlympiadHub-PK
+            © {new Date().getFullYear()} Exametric
           </Typography>
 
           {/* CENTER SECION */}

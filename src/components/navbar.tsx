@@ -44,7 +44,7 @@ export default function Navbar() {
             <Box sx={{ display: "flex", alignItems: "center", gap: 1, cursor: "pointer" }} onClick={() => navigate('/')}>
               <Logo />
               <Typography variant="h6" sx={{ fontWeight: "bold" , cursor: "pointer"}}>
-                Olympiad Hub
+                Exametric
               </Typography>
             </Box>
           </Box>
