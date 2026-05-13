@@ -21,14 +21,14 @@ export default function Nbtc(){
 
                     {/* Main Content */}
                 <Box>
-                    <SubjectPageLayout
-                            title="National Biology Talent Contest (NBTC)"
-                            guide= { expertGuide }
-                        resources={[
-                            { label: "Past Papers", content: "/nmtc/past-papers" },
-                            { label: "Syllabus", content: "syllabus/placeholder" },
-                            { label: "Registration", content: "placeholder" },
-                        ]}
+                    <SubjectPageLayout 
+                        title="National Biology Talent Contest (NMTC)"
+                        guide= { expertGuide }
+                    resources={[
+                        { label: "Past Papers", content: "/nmtc/past-papers" },
+                        { label: "Syllabus", content: "https://drive.google.com/file/d/14f91euSH5gd5k7c8ciW88R5-zB7Uq3YQ/view" },
+                        { label: "Registration", content: "https://stem.edu.pk/nstc/" },
+                    ]}
                     />
                 </Box>
 
