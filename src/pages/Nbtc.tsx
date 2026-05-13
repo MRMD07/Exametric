@@ -25,7 +25,7 @@ export default function Nbtc(){
                         title="National Biology Talent Contest (NBTC)"
                         guide= { expertGuide }
                     resources={[
-                        { label: "Past Papers", content: "/nmtc/past-papers" },
+                        { label: "Past Papers", content: "https://drive.google.com/drive/folders/1-VudsX4-ySQ_bJVmDXxfH4F0L4ZntbkN?usp=drive_link" },
                         { label: "Syllabus", content: "syllabus/placeholder" },
                     ]}
                     />
