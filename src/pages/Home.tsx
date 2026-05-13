@@ -87,6 +87,20 @@ export default function Home() {
                             <Button
                                 variant="outlined"
                                 component="a"
+                                href="https://stem.edu.pk/nstc/"
+                                target="_blank"
+                                sx={{
+                                borderRadius: "20px",
+                                borderColor: "primary.main",
+                                px: 3,
+                                }}
+                            >
+                                Register
+                            </Button>
+
+                            <Button
+                                variant="outlined"
+                                component="a"
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSf7e9Kjy1gQ3qsF4NcF7cgTE2V4YX5d94EEidDuIKmbynzPTA/viewform"
                                 target="_blank"
                                 sx={{
