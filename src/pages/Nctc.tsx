@@ -25,7 +25,7 @@ export default function Nctc(){
                         title="National Chemistry Talent Contest (NCTC)"
                         guide= { expertGuide }
                     resources={[
-                        { label: "Past Papers", content: "https://drive.google.com/drive/folders/1IYY-Q0yAL9OS89fh_CA0VhgMZuhHVpWV?usp=drive_link" },
+                        { label: "Past Papers", content: "https://drive.google.com/drive/folders/1lYc4NahcM1RGzDJF6FtqOKiEAR6lpnaA?usp=drive_link" },
                         { label: "Study Material", content: "https://drive.google.com/drive/folders/1sCxZnxY9KuXTyEEzchQ6v0Pl6JKsXumu" },
                     ]}                    
                     />
