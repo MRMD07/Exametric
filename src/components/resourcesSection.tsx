@@ -2,7 +2,7 @@ import {
   Box,
   Typography,
   TextField,
-  Button,
+  Paper,
   InputAdornment,
 } from "@mui/material";
 
@@ -28,7 +28,7 @@ export default function PrepareSection() {
         maxWidth: "1400px",
         mx: "auto",
         px: { xs: 3, md: 8 },
-        py: { xs: 6, md: 8 },
+        py: { xs: 3, md: 4 },
       }}
     >
       {/* TOP SECTION */}
@@ -39,6 +39,7 @@ export default function PrepareSection() {
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
           gap: 4,
+          borderBottom: "2px solid",
           mb: 8,
         }}
       >
@@ -46,7 +47,6 @@ export default function PrepareSection() {
         <Typography
           variant="h2"
           sx={{
-            fontWeight: 500,
             letterSpacing: "0.02em",
             alignSelf: { xs: "flex-start", md: "center" },
           }}
@@ -94,22 +94,45 @@ export default function PrepareSection() {
         }}
       >
         {subjects.map((subject) => (
-          <Button
+          <Paper
             key={subject.title}
-            href={subject.route}
-            target="_blank"
-            variant="outlined"
+            elevation={2}
+            onClick={() => navigate(subject.route)}
             sx={{
-              borderRadius: "999px",
-              px: 4,
-              minWidth: 140,
-              '&:hover':{
-                transform: "translateY(-1px)",
-              }
+              height: 180,
+              borderRadius: 5,
+              cursor: "pointer",
+
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+
+              bgcolor: "background.default",
+              color: "text.primary",
+
+              transition: "all 0.25s ease",
+
+              border: "1px solid",
+              borderColor: "primary.main",
+
+              "&:hover": {
+                transform: "translateY(-6px)",
+                boxShadow: 8,
+              },
             }}
           >
-            {subject.title}
-          </Button>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 400,
+                letterSpacing: "0.03em",
+                textAlign: "center",
+                fontSize: { xs: "2.5rem", md: "3.2rem" },
+              }}
+            >
+              {subject.title}
+            </Typography>
+          </Paper>
         ))}
       </Box>
     </Box>
