@@ -51,7 +51,7 @@ export default function SubjectPageLayout({
           bgcolor: "background.paper",
           p: { xs: 3, md: 5 },
           borderRadius: 5,
-          maxHeight: { md: 500 },
+          maxHeight: { xs: 300, md: 500 },
           overflowX: "hidden",
           overflowY: "auto",
           mb: 5,
