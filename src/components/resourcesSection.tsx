@@ -1,12 +1,9 @@
 import {
   Box,
   Typography,
-  TextField,
   Paper,
-  InputAdornment,
 } from "@mui/material";
 
-import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 
 const subjects = [
@@ -14,6 +11,8 @@ const subjects = [
   { title: "NPTC", route: "/nptc" },
   { title: "NCTC", route: "/nctc" },
   { title: "NBTC", route: "/nbtc" },
+  { title: "POI", route: "/poi" },
+  { title: "POAI", route: "/poai" },
   { title: "Community Resources", route: "/community-resources" },
   { title: "AI Tutor", route: "/ai-tutor" },
 ];
@@ -55,31 +54,6 @@ export default function PrepareSection() {
           PREPARE
         </Typography>
 
-        {/* SEARCH */}
-        <TextField
-          placeholder="Search Resources..."
-          variant="outlined"
-          fullWidth
-          sx={{
-            maxWidth: 700,
-
-            "& .MuiOutlinedInput-root": {
-              borderRadius: "999px",
-              height: 64,
-              fontSize: "1.1rem",
-              px: 1,
-            },
-          }}
-          slotProps={{
-            input: {
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }
-          }}
-        />
       </Box>
 
       {/* GRID */}
@@ -100,7 +74,7 @@ export default function PrepareSection() {
             elevation={2}
             onClick={() => { navigate(subject.route); window.scrollTo(0, 0);} }
             sx={{
-              height: 180,
+              height: 150,
               borderRadius: 5,
               cursor: "pointer",
 
@@ -125,10 +99,8 @@ export default function PrepareSection() {
             <Typography
               variant="h2"
               sx={{
-                fontWeight: 400,
                 letterSpacing: "0.03em",
                 textAlign: "center",
-                fontSize: { xs: "2.5rem", md: "3.2rem" },
               }}
             >
               {subject.title}
