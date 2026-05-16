@@ -98,7 +98,7 @@ export default function PrepareSection() {
           <Paper
             key={subject.title}
             elevation={2}
-            onClick={() => navigate(subject.route)}
+            onClick={() => { navigate(subject.route); window.scrollTo(0, 0);} }
             sx={{
               height: 180,
               borderRadius: 5,
