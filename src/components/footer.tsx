@@ -6,7 +6,7 @@ export default function Footer() {
       component="footer"
       sx={(theme) => ({
         mt: "auto",
-        py: 4, // Increased padding for cleaner desktop/mobile separation
+        py: 4,
         backgroundColor: "background.default",
         color: "text.primary",
         borderTop: `1px solid ${theme.palette.text.primary}20`,
@@ -17,12 +17,10 @@ export default function Footer() {
         <Box
           sx={{
             display: "flex",
-            // Stacks cleanly on mobile, side-by-side on desktop
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
             gap: { xs: 3, md: 4 },
-            // Removed width: 100% and ml to prevent horizontal layout push
           }}
         >
           {/* LEFT SIDE */}
