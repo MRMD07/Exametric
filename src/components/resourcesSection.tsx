@@ -1,7 +1,6 @@
 import {
   Box,
   Typography,
-  Paper,
 } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
@@ -69,9 +68,8 @@ export default function PrepareSection() {
         }}
       >
         {subjects.map((subject) => (
-          <Paper
+          <Box
             key={subject.title}
-            elevation={2}
             onClick={() => { navigate(subject.route); window.scrollTo(0, 0);} }
             sx={{
               height: 150,
@@ -105,7 +103,7 @@ export default function PrepareSection() {
             >
               {subject.title}
             </Typography>
-          </Paper>
+          </Box>
         ))}
       </Box>
     </Box>
