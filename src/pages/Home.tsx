@@ -9,7 +9,8 @@ import {
   Stack
 } from "@mui/material";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
+import PrepareSection from "../components/resourcesSection";
 
 export default function Home() {
 
@@ -202,9 +203,7 @@ export default function Home() {
                         py: 6,
                         }}
                     >
-                        <Typography variant="h4">
-                        Resources Section (placeholder)
-                        </Typography>
+                        <PrepareSection />
                     </Box>
 
                 </Box>
