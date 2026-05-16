@@ -6,10 +6,12 @@ import Nctc from "./pages/Nctc.tsx";
 import Nbtc from "./pages/Nbtc.tsx";
 import Community from "./pages/Community.tsx";
 import Aitutor from "./pages/Aitutor.tsx";
+import ScrollToTop from "./components/scrollToTop.tsx";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
