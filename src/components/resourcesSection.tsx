@@ -39,7 +39,6 @@ export default function PrepareSection() {
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
           gap: 4,
-          borderBottom: "2px solid",
           mb: 8,
         }}
       >
@@ -48,6 +47,7 @@ export default function PrepareSection() {
           variant="h2"
           sx={{
             letterSpacing: "0.02em",
+            borderBottom: "2px solid",            
             alignSelf: { xs: "flex-start", md: "center" },
           }}
         >
