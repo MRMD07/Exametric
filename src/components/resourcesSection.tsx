@@ -38,8 +38,9 @@ export default function PrepareSection() {
           alignItems: "center",
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
-          gap: 4,
-          mb: 8,
+          gap: 3,
+          pb: 2,
+          mb: 6,
         }}
       >
         {/* HEADING */}
