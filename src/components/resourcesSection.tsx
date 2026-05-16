@@ -2,7 +2,7 @@ import {
   Box,
   Typography,
   TextField,
-  Paper,
+  Button,
   InputAdornment,
 } from "@mui/material";
 
@@ -94,44 +94,22 @@ export default function PrepareSection() {
         }}
       >
         {subjects.map((subject) => (
-          <Paper
+          <Button
             key={subject.title}
-            elevation={2}
-            onClick={() => navigate(subject.route)}
+            href={subject.route}
+            target="_blank"
+            variant="outlined"
             sx={{
-              height: 180,
-              borderRadius: 5,
-              cursor: "pointer",
-
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-
-              bgcolor: "background.default",
-              color: "text.primary",
-
-              transition: "all 0.25s ease",
-
-              border: "1px solid",
-              borderColor: "primary.main",
-
-              "&:hover": {
-                transform: "translateY(-6px)",
-                boxShadow: 8,
-              },
+              borderRadius: "999px",
+              px: 4,
+              minWidth: 140,
+              '&:hover':{
+                transform: "translateY(-1px)",
+              }
             }}
           >
-            <Typography
-              variant="h2"
-              sx={{
-                fontWeight: 400,
-                letterSpacing: "0.03em",
-                fontSize: { xs: "2.5rem", md: "3.2rem" },
-              }}
-            >
-              {subject.title}
-            </Typography>
-          </Paper>
+            {subject.title}
+          </Button>
         ))}
       </Box>
     </Box>
