@@ -17,6 +17,8 @@ function App() {
         <Route path="/nptc" element={<Nptc />} />
         <Route path="/nctc" element={<Nctc />} />
         <Route path="/nbtc" element={<Nbtc />} />
+        <Route path="/poi" element={<Nbtc />} />
+        <Route path="/poai" element={<Nbtc />} />
         <Route path="/community-resources" element={<Community />} />
         <Route path="/ai-tutor" element={<Aitutor/>} />
       </Routes>

@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ThemeToggle from "./toggleTheme";
 import Logo from "./Logo";
 
-const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "Community Resources", "AI Tutor" ];
+const navItems = [ "HOME", "NMTC", "NPTC", "NCTC", "NBTC", "POI", "POAI", "Community Resources", "AI Tutor" ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
