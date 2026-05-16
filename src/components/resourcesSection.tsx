@@ -70,7 +70,7 @@ export default function PrepareSection() {
         {subjects.map((subject) => (
           <Box
             key={subject.title}
-            onClick={() => { navigate(subject.route); window.scrollTo(0, 0);} }
+            onClick={() => navigate(subject.route) }
             sx={{
               height: 150,
               borderRadius: 5,
