@@ -198,7 +198,7 @@ export default function Home() {
                     <Box
                         id="resources"
                         sx={{
-                        height: "100vh",
+                        minHeight: "100vh",
                         px: 4,
                         py: 6,
                         }}
@@ -207,7 +207,6 @@ export default function Home() {
                     </Box>
 
                 </Box>
-
                     {/* Footer */}
                 <Footer />
             </Box>
