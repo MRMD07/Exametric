@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 const subjects = [
   { title: "NMTC", desc: "Entry test for International Mathematics Olympiad", route: "/nmtc" },
-  { title: "NPTC", desc: "Entry test for International Mathematics Olympiad", route: "/nptc" },
-  { title: "NCTC", desc: "Entry test for International Mathematics Olympiad", route: "/nctc" },
-  { title: "NBTC", desc: "Entry test for International Mathematics Olympiad", route: "/nbtc" },
-  { title: "POI", desc: "Entry test for International Mathematics Olympiad", route: "/poi" },
-  { title: "POAI", desc: "Entry test for International Mathematics Olympiad", route: "/poai" },
+  { title: "NPTC", desc: "Entry test for International Physics Olympiad", route: "/nptc" },
+  { title: "NCTC", desc: "Entry test for International Chemistry Olympiad", route: "/nctc" },
+  { title: "NBTC", desc: "Entry test for International Biology Olympiad", route: "/nbtc" },
+  { title: "POI", desc: "Entry test for International Olympiad in Infomatics", route: "/poi" },
+  { title: "POAI", desc: "Entry test for International Olympiad in Artificial Intelligence", route: "/poai" },
   { title: "Community Resources", desc: "", route: "/community-resources" },
-  { title: "AI Tutor", desc: "Entry test for International Mathematics Olympiad", route: "/ai-tutor" },
+  { title: "AI Tutor", desc: "AI teacher that answers all subject related questions", route: "/ai-tutor" },
 ];
 
 export default function PrepareSection() {
