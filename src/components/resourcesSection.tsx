@@ -79,6 +79,7 @@ export default function PrepareSection() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              px: { md: 4 },
 
               bgcolor: "background.default",
               color: "text.primary",
@@ -102,6 +103,14 @@ export default function PrepareSection() {
               }}
             >
               {subject.title}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                textAlign: "center",
+              }}
+            >
+              {subject.desc}
             </Typography>
           </Box>
         ))}
