@@ -62,7 +62,7 @@ export default function PrepareSection() {
           gridTemplateColumns: {
             xs: "1fr",
             sm: "1fr 1fr",
-            md: "repeat(3, 1fr)",
+            md: "repeat(6, 1fr)",
           },
           gap: 5,
         }}
@@ -75,6 +75,10 @@ export default function PrepareSection() {
               height: 150,
               borderRadius: 5,
               cursor: "pointer",
+              
+              gridColumn: {
+                md: subject.title == "Community Resources" ? '2 / span 2' : 'span 2',
+              },
 
               display: "flex",
               alignItems: "center",
