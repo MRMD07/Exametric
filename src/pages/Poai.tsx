@@ -26,6 +26,7 @@ export default function Poai(){
                         guide= { expertGuide }
                     resources={[
                         { label: "Resources", content: "https://youtube.com/playlist?list=PLydJzAOIorUcc7paqgZ5iwxNXqAU7TYwW&si=-GAapy_ePTkEPyoe" },
+                        { label: }
                     ]}
                     />
                 </Box>
