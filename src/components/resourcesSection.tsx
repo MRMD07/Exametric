@@ -6,14 +6,14 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const subjects = [
-  { title: "NMTC", route: "/nmtc" },
-  { title: "NPTC", route: "/nptc" },
-  { title: "NCTC", route: "/nctc" },
-  { title: "NBTC", route: "/nbtc" },
-  { title: "POI", route: "/poi" },
-  { title: "POAI", route: "/poai" },
-  { title: "Community Resources", route: "/community-resources" },
-  { title: "AI Tutor", route: "/ai-tutor" },
+  { title: "NMTC", desc: "Entry test for International Mathematics Olympiad", route: "/nmtc" },
+  { title: "NPTC", desc: "Entry test for International Mathematics Olympiad", route: "/nptc" },
+  { title: "NCTC", desc: "Entry test for International Mathematics Olympiad", route: "/nctc" },
+  { title: "NBTC", desc: "Entry test for International Mathematics Olympiad", route: "/nbtc" },
+  { title: "POI", desc: "Entry test for International Mathematics Olympiad", route: "/poi" },
+  { title: "POAI", desc: "Entry test for International Mathematics Olympiad", route: "/poai" },
+  { title: "Community Resources", desc: "", route: "/community-resources" },
+  { title: "AI Tutor", desc: "Entry test for International Mathematics Olympiad", route: "/ai-tutor" },
 ];
 
 export default function PrepareSection() {
