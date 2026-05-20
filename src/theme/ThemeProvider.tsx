@@ -39,6 +39,7 @@ export const ThemeContextProvider = ({ children }: any) => {
                         "*::-webkit-scrollbar-thumb": {
                             backgroundColor: theme.palette.primary.main,
                             borderRadius: "10px",
+                            minHeight: "40px",
                         },
                         }}
                     />
