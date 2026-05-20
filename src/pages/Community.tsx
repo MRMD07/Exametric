@@ -45,7 +45,7 @@ export default function Community(){
                         display: "flex",
                         flexDirection: { xs: "column", sm: "row" },
                         alignItems: "center",
-                        justifyContent: "space-between",
+                        justifyContent: "center",
 
                         gap: 2,
                         mb: 5,
@@ -58,6 +58,7 @@ export default function Community(){
                             sx={{
                             textAlign: "center",
                             fontSize: { xs: "2.2rem", md: "3rem" },
+                            mr: { xs: 0, md: 6 },
                             }}
                         >
                             Community Resources
