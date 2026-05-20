@@ -12,6 +12,11 @@ import {
 interface FilterModalProps {
   open: boolean;
   onClose: () => void;
+  selectedSubject: string;
+
+  setSelectedSubject: (
+    value: string
+  ) => void;
 }
 
 const subjects = [
@@ -24,8 +29,10 @@ const subjects = [
 ];
 
 export default function FilterModal({
-  open,
-  onClose,
+    open,
+    onClose,
+    selectedSubject,
+    setSelectedSubject,
 }: FilterModalProps) {
   return (
     <Modal open={open} onClose={onClose}>
@@ -68,7 +75,10 @@ export default function FilterModal({
 
           <Select
             label="Subject"
-            defaultValue=""
+            value={selectedSubject}
+            onChange={(e) =>
+              setSelectedSubject(e.target.value)
+            }
           >
             {subjects.map((subject) => (
               <MenuItem
