@@ -7,7 +7,6 @@ import {
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 export interface Resource {
-  id: string;
   title: string;
   subject: string;
   drive_link: string;

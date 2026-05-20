@@ -27,7 +27,7 @@ export default function ResourceList({
     >
       {resources.map((item) => (
         <ResourceCard
-          key={item.id}
+          key={item.title}
           item={item}
         />
       ))}
