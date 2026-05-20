@@ -150,7 +150,7 @@ export default function Home() {
 
                             <Typography variant="body2" sx={{ mb: 2 }}>
                                 Students initially register through the  
-                                official <Link href="https://stem.edu.pk/nstc/" target="_blank" underline="hover" sx={{ fontWeight: 'bold' }}>NSTC portal</Link> and 
+                                official <Link href="https://stem.edu.pk/nstc/" target="_blank" sx={{ fontWeight: 'bold' }}>NSTC portal</Link> and 
                                 take a nation wide screen test that evaluates conceptual understanding
                                 and problem-solving skills.
                             </Typography>
