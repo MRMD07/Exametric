@@ -11,9 +11,11 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import FilterModal from "../components/Filter";
+import UploadModal from "../components/Upload";
 
 export default function Community(){
     const [filterOpen, setFilterOpen] = useState(false);
+    const [uploadOpen, setUploadOpen] = useState(false);
 
     return(
         <>
@@ -70,6 +72,7 @@ export default function Community(){
 
                         <Button
                             variant="contained"
+                            onClick={() => setUploadOpen(true)}
                             sx={{
                             height: 42,
                             px: 3,
@@ -153,9 +156,15 @@ export default function Community(){
                     </Button>
                     </Box>
                 </Box>
+
+                {/* Modals */}
                 <FilterModal
                     open={filterOpen}
                     onClose={() => setFilterOpen(false)}
+                />
+                <UploadModal
+                    open={uploadOpen}
+                    onClose={() => setUploadOpen(false)}
                 />
 
                 {/* Footer */}
