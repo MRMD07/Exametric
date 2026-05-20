@@ -5,12 +5,16 @@ import {
     InputAdornment,
     Button,
  } from "@mui/material";
+import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import FilterModal from "../components/Filter";
 
 export default function Community(){
+    const [filterOpen, setFilterOpen] = useState(false);
+
     return(
         <>
             <Box
@@ -125,6 +129,7 @@ export default function Community(){
                     <Button
                         variant="outlined"
                         startIcon={<FilterListIcon />}
+                        onClick={() => setFilterOpen(true)}
                         sx={{
                         borderRadius: "999px",
 
@@ -148,6 +153,10 @@ export default function Community(){
                     </Button>
                     </Box>
                 </Box>
+                <FilterModal
+                    open={filterOpen}
+                    onClose={() => setFilterOpen(false)}
+                />
 
                 {/* Footer */}
                 <Footer/>
