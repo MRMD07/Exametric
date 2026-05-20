@@ -5,17 +5,56 @@ import {
     InputAdornment,
     Button,
  } from "@mui/material";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import FilterModal from "../components/Filter";
 import UploadModal from "../components/Upload";
+import { type Resource } from "../components/ResourceCard";
+import ResourceList from "../components/ResourceList";
 
 export default function Community(){
     const [filterOpen, setFilterOpen] = useState(false);
     const [uploadOpen, setUploadOpen] = useState(false);
+    const [search, setSearch] = useState("");
+    const [selectedSubject, setSelectedSubject] = useState("");
+
+    // Temporary dummy data
+    const resources: Resource[] = [
+        {
+            id: "1",
+            title: "IMO Geometry Notes",
+            subject: "Math",
+            drive_link: "https://google.com",
+        },
+        {
+            id: "2",
+            title: "Organic Chemistry Guide",
+            subject: "Chemistry",
+            drive_link: "https://google.com",
+        },
+        {
+            id: "3",
+            title: "Physics Camp Problems",
+            subject: "Physics",
+            drive_link: "https://google.com",
+        },
+    ];
+
+    const filteredResources = useMemo(() => {
+        return resources.filter((item) => {
+            const matchesSearch =
+            item.title.toLowerCase().includes(search.toLowerCase());
+
+            const matchesSubject =
+            selectedSubject === "" ||
+            item.subject === selectedSubject;
+
+            return matchesSearch && matchesSubject;
+        });
+    }, [search, selectedSubject]);
 
     return(
         <>
@@ -106,62 +145,71 @@ export default function Community(){
                         },
                     }}
                     >
-                    <TextField
-                        placeholder="Search Resources..."
-                        variant="outlined"
-                        fullWidth
-                        sx={{
-                        "& .MuiOutlinedInput-root": {
+                        <TextField
+                            placeholder="Search Resources..."
+                            variant="outlined"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                            fullWidth
+                            sx={{
+                            "& .MuiOutlinedInput-root": {
+                                borderRadius: "999px",
+                                height: 44,
+                                fontSize: "1rem",
+                                px: 2,
+                            },
+                            }}
+                            slotProps={{
+                            input: {
+                                startAdornment: (
+                                <InputAdornment position="start">
+                                    <SearchIcon />
+                                </InputAdornment>
+                                ),
+                            },
+                            }}
+                        />
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<FilterListIcon />}
+                            onClick={() => setFilterOpen(true)}
+                            sx={{
                             borderRadius: "999px",
+
                             height: 44,
-                            fontSize: "1rem",
-                            px: 2,
-                        },
-                        }}
-                        slotProps={{
-                        input: {
-                            startAdornment: (
-                            <InputAdornment position="start">
-                                <SearchIcon />
-                            </InputAdornment>
-                            ),
-                        },
-                        }}
-                    />
 
-                    <Button
-                        variant="outlined"
-                        startIcon={<FilterListIcon />}
-                        onClick={() => setFilterOpen(true)}
-                        sx={{
-                        borderRadius: "999px",
+                            px: 3,
 
-                        height: 44,
+                            width: {
+                                xs: "100%",
+                                sm: "auto",
+                            },
 
-                        px: 3,
+                            textTransform: "none",
 
-                        width: {
-                            xs: "100%",
-                            sm: "auto",
-                        },
+                            whiteSpace: "nowrap",
 
-                        textTransform: "none",
-
-                        whiteSpace: "nowrap",
-
-                        flexShrink: 0,
-                        }}
-                    >
-                        Filter
-                    </Button>
+                            flexShrink: 0,
+                            }}
+                        >
+                            Filter
+                        </Button>
                     </Box>
+                    
+                    <ResourceList
+                        resources={filteredResources}
+                    />
                 </Box>
 
                 {/* Modals */}
                 <FilterModal
                     open={filterOpen}
                     onClose={() => setFilterOpen(false)}
+                    selectedSubject={selectedSubject}
+                    setSelectedSubject={setSelectedSubject}
                 />
+
                 <UploadModal
                     open={uploadOpen}
                     onClose={() => setUploadOpen(false)}
