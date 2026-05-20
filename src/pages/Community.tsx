@@ -6,6 +6,7 @@ import {
     Button,
  } from "@mui/material";
 import { useState, useMemo } from "react";
+import { createClient } from "@supabase/supabase-js";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import Navbar from "../components/navbar";
@@ -15,33 +16,38 @@ import UploadModal from "../components/Upload";
 import { type Resource } from "../components/ResourceCard";
 import ResourceList from "../components/ResourceList";
 
-export default function Community(){
+export default async function Community(){
     const [filterOpen, setFilterOpen] = useState(false);
     const [uploadOpen, setUploadOpen] = useState(false);
     const [search, setSearch] = useState("");
     const [selectedSubject, setSelectedSubject] = useState("");
 
-    // Temporary dummy data
-    const resources: Resource[] = [
-        {
-            id: "1",
-            title: "IMO Geometry Notes",
-            subject: "Math",
-            drive_link: "https://google.com",
-        },
-        {
-            id: "2",
-            title: "Organic Chemistry Guide",
-            subject: "Chemistry",
-            drive_link: "https://google.com",
-        },
-        {
-            id: "3",
-            title: "Physics Camp Problems",
-            subject: "Physics",
-            drive_link: "https://google.com",
-        },
-    ];
+    const SUPABASE_URL = 'https://oetdlhxeylswohijqypd.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ldGRsaHhleWxzd29oaWpxeXBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ2OTEwMDYsImV4cCI6MjA5MDI2NzAwNn0.O0wuALd8lm3YxbbthbDYPQF0vwXULimXdKhrEN7TSDU';
+
+    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+     const resources: Resource[] = await supabaseClient.from('resources').select('*').order('created_at', { ascending: false });
+    //[
+    //     // {
+    //     //     id: "1",
+    //     //     title: "IMO Geometry Notes",
+    //     //     subject: "Math",
+    //     //     drive_link: "https://google.com",
+    //     // },
+    //     // {
+    //     //     id: "2",
+    //     //     title: "Organic Chemistry Guide",
+    //     //     subject: "Chemistry",
+    //     //     drive_link: "https://google.com",
+    //     // },
+    //     // {
+    //     //     id: "3",
+    //     //     title: "Physics Camp Problems",
+    //     //     subject: "Physics",
+    //     //     drive_link: "https://google.com",
+    //     // },
+    // ];
 
     const filteredResources = useMemo(() => {
         return resources.filter((item) => {
