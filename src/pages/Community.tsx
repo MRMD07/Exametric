@@ -35,7 +35,7 @@ export default function Community(){
                         mx: "auto",
                         display: "flex",
                         flexDirection: "column",
-                        alignItems: "center", // Keeps rows centered horizontally
+                        alignItems: "center", 
                     }}
                 >
                     {/* HEADING + UPLOAD ROW */}
@@ -52,29 +52,29 @@ export default function Community(){
                     width: "100%",
                 }}
                 >
-                <Typography
-                    variant="h3"
-                    sx={{
-                    textAlign: "center",
-                    fontSize: { xs: "2.2rem", md: "3rem" },
-                    }}
-                >
-                    Community Resources
-                </Typography>
+                    <Typography
+                        variant="h3"
+                        sx={{
+                        textAlign: "center",
+                        fontSize: { xs: "2.2rem", md: "3rem" },
+                        }}
+                    >
+                        Community Resources
+                    </Typography>
 
-                <Button
-                    variant="contained"
-                    sx={{
-                    height: 42,
-                    px: 3,
-                    textTransform: "none",
-                    fontWeight: "bold",
-                    borderRadius: "999px",
-                    flexShrink: 0,
-                    }}
-                >
-                    Upload
-                </Button>
+                    <Button
+                        variant="contained"
+                        sx={{
+                        height: 42,
+                        px: 3,
+                        textTransform: "none",
+                        fontWeight: "bold",
+                        borderRadius: "999px",
+                        flexShrink: 0,
+                        }}
+                    >
+                        Upload
+                    </Button>
                 </Box>
 
                     {/* SEARCH + FILTER ROW */}
