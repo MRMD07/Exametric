@@ -6,7 +6,7 @@ import {
     Button,
  } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import FilterListIcon from "@mui/icons-material/FilterList"; // Added for filter icon styling
+import FilterListIcon from "@mui/icons-material/FilterList";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
@@ -39,37 +39,43 @@ export default function Community(){
                     }}
                 >
                     {/* HEADING + UPLOAD ROW */}
-                    <Box
-                        sx={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: 3,
-                            mb: 5,
-                            width: "100%",
-                        }}
-                    >
-                        <Typography
-                            variant="h3"
-                            sx={{
-                                textAlign: "center",
-                                whiteSpace: "nowrap", // Prevents heading from breaking onto two lines
-                            }}
-                        >
-                            Community Resources
-                        </Typography>
-                        <Button 
-                            variant="contained"
-                            sx={{
-                                height: 40,
-                                px: 3,
-                                textTransform: "none",
-                                fontWeight: "bold",
-                            }}
-                        >
-                            Upload
-                        </Button>
-                    </Box>
+                <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: { xs: "column", sm: "row" },
+                    alignItems: "center",
+                    justifyContent: "space-between",
+
+                    gap: 2,
+                    mb: 5,
+
+                    width: "100%",
+                }}
+                >
+                <Typography
+                    variant="h3"
+                    sx={{
+                    textAlign: "center",
+                    fontSize: { xs: "2.2rem", md: "3rem" },
+                    }}
+                >
+                    Community Resources
+                </Typography>
+
+                <Button
+                    variant="contained"
+                    sx={{
+                    height: 42,
+                    px: 3,
+                    textTransform: "none",
+                    fontWeight: "bold",
+                    borderRadius: "999px",
+                    flexShrink: 0,
+                    }}
+                >
+                    Upload
+                </Button>
+                </Box>
 
                     {/* SEARCH + FILTER ROW */}
                     <Box
