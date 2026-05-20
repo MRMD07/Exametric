@@ -163,7 +163,7 @@ export default function Community(){
                             input: {
                                 startAdornment: (
                                 <InputAdornment position="start">
-                                    <SearchIcon />
+                                    <SearchIcon cursor="pointer" />
                                 </InputAdornment>
                                 ),
                             },
@@ -196,7 +196,7 @@ export default function Community(){
                             Filter
                         </Button>
                     </Box>
-                    
+
                     <ResourceList
                         resources={filteredResources}
                     />

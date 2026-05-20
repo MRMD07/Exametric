@@ -100,35 +100,35 @@ export default function FilterModal({
             mt: 2,
         }}
         >
-        {/* CLEAR FILTER BUTTON */}
-        <Button
-            variant="outlined"
-            color="error" 
-            onClick={() => {setSelectedSubject(""); onClose();}}
-            disabled={!selectedSubject} 
-            sx={{
-            flex: 1,
-            borderRadius: "999px",
-            height: 46,
-            textTransform: "none",
-            }}
-        >
-            Clear Filter
-        </Button>
+            {/* CLEAR FILTER BUTTON */}
+            <Button
+                variant="outlined"
+                color="error" 
+                onClick={() => {setSelectedSubject(""); onClose();}}
+                disabled={!selectedSubject} 
+                sx={{
+                flex: 1,
+                borderRadius: "999px",
+                height: 46,
+                textTransform: "none",
+                }}
+            >
+                Clear Filter
+            </Button>
 
-        {/* APPLY FILTER BUTTON */}
-        <Button
-            variant="contained"
-            onClick={onClose}
-            sx={{
-            flex: 1,
-            borderRadius: "999px",
-            height: 46,
-            textTransform: "none",
-            }}
-        >
-            Apply Filter
-        </Button>
+            {/* APPLY FILTER BUTTON */}
+            <Button
+                variant="contained"
+                onClick={onClose}
+                sx={{
+                flex: 1,
+                borderRadius: "999px",
+                height: 46,
+                textTransform: "none",
+                }}
+            >
+                Apply Filter
+            </Button>
         </Box>
       </Box>
     </Modal>
