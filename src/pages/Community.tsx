@@ -5,7 +5,6 @@ import {
     InputAdornment,
     Button,
  } from "@mui/material";
-import { createClient } from "@supabase/supabase-js";
 import { useState, useMemo, useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
@@ -15,11 +14,8 @@ import FilterModal from "../components/Filter";
 import UploadModal from "../components/Upload";
 import { type Resource } from "../components/ResourceCard";
 import ResourceList from "../components/ResourceList";
+import { supabaseClient } from "../components/supabase";
 
-const SUPABASE_URL = 'https://oetdlhxeylswohijqypd.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ldGRsaHhleWxzd29oaWpxeXBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ2OTEwMDYsImV4cCI6MjA5MDI2NzAwNn0.O0wuALd8lm3YxbbthbDYPQF0vwXULimXdKhrEN7TSDU';
-
-const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export default function Community(){
     const [filterOpen, setFilterOpen] = useState(false);
@@ -31,54 +27,41 @@ export default function Community(){
     useEffect(() => {
         async function fetchResources() {
             try {
-                const { data , error: SupabaseError } = await supabaseClient.from('resources').select('*').order('created_at', { ascending: false });
-                
-                if (SupabaseError) {
-                    console.error("Error fetching resources:", SupabaseError);
+                const { data, error } = await supabaseClient.from("resources").select("*").order("created_at", { ascending: false });
+
+                if (error) {
+                    console.error("Error fetching resources:", error);
+                    return;
                 }
 
-                if (data){
+                if (data) {
                     setResource(data as Resource[]);
                 }
+
             } catch (error) {
-                console.error("Unexpected error fetching resources:", error);
+                console.error("Unexpected error:", error);
             }
         }
+
         fetchResources();
     }, []);
-    //[
-    //     // {
-    //     //     id: "1",
-    //     //     title: "IMO Geometry Notes",
-    //     //     subject: "Math",
-    //     //     drive_link: "https://google.com",
-    //     // },
-    //     // {
-    //     //     id: "2",
-    //     //     title: "Organic Chemistry Guide",
-    //     //     subject: "Chemistry",
-    //     //     drive_link: "https://google.com",
-    //     // },
-    //     // {
-    //     //     id: "3",
-    //     //     title: "Physics Camp Problems",
-    //     //     subject: "Physics",
-    //     //     drive_link: "https://google.com",
-    //     // },
-    // ];
 
     const filteredResources = useMemo(() => {
-        return resource.filter((item: any) => {
+        return resource.filter((item) => {
+
             const matchesSearch =
-            item.title.toLowerCase().includes(search.toLowerCase());
+                item.title
+                    .toLowerCase()
+                    .includes(search.toLowerCase());
 
             const matchesSubject =
-            selectedSubject === "" ||
-            item.subject === selectedSubject;
+                selectedSubject === "" ||
+                item.subject.toLowerCase() ===
+                selectedSubject.toLowerCase();
 
             return matchesSearch && matchesSubject;
         });
-    }, [search, selectedSubject]);
+    }, [resource, search, selectedSubject]);
 
     return(
         <>
