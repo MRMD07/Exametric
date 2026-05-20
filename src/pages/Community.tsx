@@ -36,6 +36,7 @@ export default function Community(){
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center", 
+                        overflowX: "hidden",
                     }}
                 >
                         {/* HEADING + UPLOAD ROW */}
@@ -93,7 +94,7 @@ export default function Community(){
 
                         maxWidth: {
                         xs: "100%",
-                        md: 700, // 🔥 smaller on desktop
+                        md: 700, 
                         },
                     }}
                     >
