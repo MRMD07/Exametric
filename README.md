@@ -1,6 +1,6 @@
 # Olympiad-hub-extra
 
-Refactored site for the [Olympiad Hub](https://olympiadhub-pk.netlify.app) .
+Refactored site for the [Olympiad Hub](https://github.com/MRMD07/nstc-prep-hub) .
 Written in React and Typescript. Backend is written in [python](https://github.com/MRMD07/olympiad-oracle-backend)
 
 ---
