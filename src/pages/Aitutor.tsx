@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import MarkdownRenderer from "../components/renderMarkdown";
 
 const subjects = [
   "Math",
@@ -58,7 +58,7 @@ Example:
 - ABC
 - BAC
 
-These are considered the same group.
+These are considered the same group. Only one counts and their order doesn't changes the number of unique combinations.
 
 Formula:
 
@@ -213,17 +213,17 @@ export default function Aitutor(){
                                 borderRadius: 4,
 
                                 bgcolor: "background.default",
+                                height: "fit-content",
 
                                 color: "text.primary",
                                 width: "fit-content",
+                                maxWidth: "150rem",
 
                                 border: "1px solid",
                                 borderColor: "divider",
                             }}
                             >
-                                <ReactMarkdown>
-                                    {msg.content}
-                                </ReactMarkdown>
+                                <MarkdownRenderer content={msg.content} />
                             </Paper>
                         </Box>
                         )
