@@ -36,7 +36,7 @@ export default function Oracle() {
     if (paperRef.current) {
       paperRef.current.scrollTop = paperRef.current.scrollHeight;
     }
-  }, []);
+  }, [messages]);
 
   useEffect(() => {
     storage.set(STORAGE_KEY, messages);
@@ -49,6 +49,7 @@ export default function Oracle() {
     setMessages((prev) => [
       ...prev,
       { role: "user", content: message },
+      { role: "assistant", content: `This is a demo response. The actual AI response functionality is not implemented yet.` },
     ].slice(-10)); // Keep only the last 10 messages for context
 
     setMessage("");
