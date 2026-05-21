@@ -100,7 +100,7 @@ export default function PrepareSection() {
             }}
           >
             <Typography
-              variant="h2"
+              variant="h4"
               sx={{
                 letterSpacing: "0.03em",
                 textAlign: "center",
