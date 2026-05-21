@@ -9,7 +9,7 @@ import {
   IconButton,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import MarkdownRenderer from "../components/renderMarkdown";
@@ -72,6 +72,13 @@ nCr = n! / r!(n-r)!
 export default function Aitutor(){
     const [subject, setSubject] = useState("Math");
     const [message, setMessage] = useState("");
+    const paperRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (paperRef.current) {
+          paperRef.current.scrollTop = paperRef.current.scrollHeight;
+        }
+    }, []);
 
     return(
         <>
@@ -171,7 +178,7 @@ export default function Aitutor(){
                     {/* CHAT WINDOW */}
                     <Paper
                     elevation={2}
-                    
+                    ref={paperRef}
                     sx={{
                         flex: 1,
 
