@@ -182,13 +182,14 @@ export default function Oracle() {
                         : "flex-start",
 
                     maxWidth: "85%",
+                    minHeight: "fit-content",
                   }}
                 >
                   <Paper
                     elevation={0}
                     sx={{
-                      px: 2.5,
-                      py: 1.8,
+                      px: 2,
+                      py: 1.5,
 
                       borderRadius: 4,
 
@@ -240,7 +241,7 @@ export default function Oracle() {
 
               multiline
 
-              maxRows={4}
+              maxRows={2}
 
               value={message}
 
