@@ -13,6 +13,9 @@ import { useState, useRef, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import MarkdownRenderer from "../components/renderMarkdown";
+import { storage}  from "../components/localStorage";
+
+const STORAGE_KEY = "aitutor_messages";
 
 const subjects = [
   "Math",
@@ -24,54 +27,16 @@ const subjects = [
 ];
 
 const demoMessages: any[] = [
-  {
-    role: "user",
-    content:
-      "Explain the difference between permutations and combinations.",
-  },
-  {
-    role: "assistant",
-    content: `
-# Permutations vs Combinations
-
-## Permutations
-Order matters.
-
-Example:
-- ABC
-- BAC
-
-These count as different arrangements.
-
-Formula:
-
-\`\`\`
-nPr = n! / (n-r)!
-\`\`\`
-
----
-
-## Combinations
-Order does NOT matter.
-
-Example:
-- ABC
-- BAC
-
-These are considered the same group. Only one counts and their order doesn't changes the number of unique combinations.
-
-Formula:
-
-\`\`\`
-nCr = n! / r!(n-r)!
-\`\`\`
-`,
-  },
+    {
+        role: "assistant",
+        content: `Hello! I am your AI tutor. Ask me anything related to ${subjects.join(", ")} and I'll do my best to help you out!`,
+    },
 ];
 
 export default function Aitutor(){
     const [subject, setSubject] = useState("Math");
     const [message, setMessage] = useState("");
+    const [messages, setMessages] = useState(() => storage.get(STORAGE_KEY, demoMessages));
     const paperRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -79,6 +44,22 @@ export default function Aitutor(){
           paperRef.current.scrollTop = paperRef.current.scrollHeight;
         }
     }, []);
+
+    useEffect(() => {
+        storage.set(STORAGE_KEY, messages);
+    }, [messages]);
+
+    function handleSend() {
+        if (!message.trim()) return;
+
+        // 1. Add the user's message to the chat
+        setMessages((prev) => [
+            ...prev,
+            { role: "user", content: message },
+        ].slice(-10)); // Keep only the last 10 messages for context
+
+        setMessage("");
+    }
 
     return(
         <>
@@ -199,7 +180,7 @@ export default function Aitutor(){
                         maxHeight: { xs: 350, md: 450 },
                     }}
                     >
-                    {demoMessages.map(
+                    {messages.map(
                         (msg, index) => (
                         <Box
                             key={index}
@@ -283,6 +264,7 @@ export default function Aitutor(){
                     />
 
                     <IconButton
+                        onClick={() => {handleSend}}
                         sx={{
                         width: 60,
                         height: 60,

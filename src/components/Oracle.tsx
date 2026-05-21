@@ -12,7 +12,7 @@ import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CloseIcon from "@mui/icons-material/Close";
 import SendIcon from "@mui/icons-material/Send";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import MarkdownRenderer from "./renderMarkdown";
 import { storage}  from "./localStorage";
 
@@ -30,6 +30,13 @@ export default function Oracle() {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState(() => storage.get(STORAGE_KEY, introMessage));
+  const paperRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (paperRef.current) {
+      paperRef.current.scrollTop = paperRef.current.scrollHeight;
+    }
+  }, []);
 
   useEffect(() => {
     storage.set(STORAGE_KEY, messages);
@@ -157,6 +164,7 @@ export default function Oracle() {
 
           {/* MESSAGES */}
           <Box
+            ref={paperRef}
             sx={{
               flex: 1,
 
