@@ -47,7 +47,7 @@ export default function PrepareSection() {
           sx={{
             letterSpacing: "0.02em",
             borderBottom: "2px solid",            
-            alignSelf: { xs: "flex-start", md: "center" },
+            alignSelf: { xs: "center", md: "center" },
           }}
         >
           PREPARE
