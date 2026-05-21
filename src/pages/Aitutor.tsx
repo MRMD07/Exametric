@@ -126,34 +126,34 @@ export default function Aitutor(){
                         },
                     }}
                     >
-                    <Typography variant="h3">
-                        AI Tutor
-                    </Typography>
+                        <Typography variant="h3">
+                            AI Tutor
+                        </Typography>
 
-                    {/* SUBJECT SELECTOR */}
-                    <FormControl
-                        sx={{
-                        minWidth: 220,
-                        }}
-                    >
-                        <Select
-                        value={subject}
-                        onChange={(e) =>
-                            setSubject(
-                            e.target.value
-                            )
-                        }
+                        {/* SUBJECT SELECTOR */}
+                        <FormControl
+                            sx={{
+                            minWidth: 220,
+                            }}
                         >
-                        {subjects.map((item) => (
-                            <MenuItem
-                            key={item}
-                            value={item}
+                            <Select
+                            value={subject}
+                            onChange={(e) =>
+                                setSubject(
+                                e.target.value
+                                )
+                            }
                             >
-                            {item}
-                            </MenuItem>
-                        ))}
-                        </Select>
-                    </FormControl>
+                            {subjects.map((item) => (
+                                <MenuItem
+                                key={item}
+                                value={item}
+                                >
+                                {item}
+                                </MenuItem>
+                            ))}
+                            </Select>
+                        </FormControl>
                     </Box>
 
                     {/* CHAT WINDOW */}
