@@ -9,10 +9,12 @@ import Poai from "./pages/Poai.tsx";
 import Community from "./pages/Community.tsx";
 import Aitutor from "./pages/Aitutor.tsx";
 import { ScrollToTop } from "./components/scroll.tsx";
+import Oracle from "./components/Oracle.tsx";
 
 function App() {
   return (
     <BrowserRouter>
+      <Oracle />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
