@@ -170,7 +170,7 @@ export default function Aitutor(){
 
                     {/* CHAT WINDOW */}
                     <Paper
-                    elevation={0}
+                    elevation={2}
                     sx={{
                         flex: 1,
 
@@ -188,7 +188,7 @@ export default function Aitutor(){
 
                         gap: 1,
 
-                        maxHeight: { xs: 350, md: 500 },
+                        maxHeight: { xs: 350, md: 450 },
                     }}
                     >
                     {demoMessages.map(
@@ -233,7 +233,7 @@ export default function Aitutor(){
                     {/* INPUT AREA */}
                     <Box
                     sx={{
-                        mt: 3,
+                        mt: 2,
 
                         display: "flex",
 
@@ -247,7 +247,7 @@ export default function Aitutor(){
 
                         multiline
 
-                        maxRows={4}
+                        maxRows={3}
 
                         value={message}
 
