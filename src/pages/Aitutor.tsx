@@ -115,7 +115,7 @@ export default function Aitutor(){
 
                         alignItems: "center",
 
-                        mb: 4,
+                        mb: 2,
                         pb: 2,
                         borderBottom: "1px solid ",
                         borderColor: "divider",
@@ -174,9 +174,7 @@ export default function Aitutor(){
                     sx={{
                         flex: 1,
 
-                        p: 3,
-
-                        borderRadius: 5,
+                        p: 1,
 
                         border: "1px solid",
                         borderColor: "divider",
@@ -188,9 +186,9 @@ export default function Aitutor(){
                         display: "flex",
                         flexDirection: "column",
 
-                        gap: 3,
+                        gap: 1,
 
-                        maxHeight: { xs: 500, md: 500 },
+                        maxHeight: { xs: 350, md: 500 },
                     }}
                     >
                     {demoMessages.map(
@@ -209,22 +207,23 @@ export default function Aitutor(){
                             <Paper
                             elevation={0}
                             sx={{
-                                px: 3,
-                                py: 2,
+                                px: 2,
+                                py: 1,
 
                                 borderRadius: 4,
 
                                 bgcolor: "background.default",
 
                                 color: "text.primary",
+                                width: "fit-content",
 
                                 border: "1px solid",
-                                borderColor: "text.primary",
+                                borderColor: "divider",
                             }}
                             >
-                            <ReactMarkdown>
-                                {msg.content}
-                            </ReactMarkdown>
+                                <ReactMarkdown>
+                                    {msg.content}
+                                </ReactMarkdown>
                             </Paper>
                         </Box>
                         )
