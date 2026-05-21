@@ -24,10 +24,19 @@ const demoMessages = [
 
 export default function Oracle() {
   const [open, setOpen] = useState(false);
-
   const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState(demoMessages);
 
-  const [messages] = useState(demoMessages);
+  function handleSend() {
+    if (!message.trim()) return;
+
+    // 1. Add the user's message to the chat
+    setMessages((prev) => [
+      ...prev,
+      { role: "user", content: message },
+    ]);
+    setMessage("");
+  }
 
   return (
     <>
@@ -237,7 +246,7 @@ export default function Oracle() {
                   "divider",
               }}
             >
-              <SendIcon />
+              <SendIcon onClick={handleSend} />
             </IconButton>
           </Box>
         </Paper>
