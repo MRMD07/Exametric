@@ -1,6 +1,7 @@
 import {
   Box,
   Paper,
+  Button,
   Typography,
   IconButton,
   TextField,
@@ -23,7 +24,7 @@ const introMessage = [
   },
 ];
 
-const STORAGE_KEY = "chat_messages";
+const STORAGE_KEY = "myList";
 
 export default function Oracle() {
   const [open, setOpen] = useState(false);
@@ -124,13 +125,26 @@ export default function Oracle() {
 
               display: "flex",
               alignItems: "center",
-              justifyContent:
-                "space-between",
+              justifyContent: "space-between",
             }}
           >
             <Typography variant="h5">
               Oracle
             </Typography>
+
+            <Button
+                variant="outlined"
+                color="error" 
+                onClick={() => {
+                  setMessages(introMessage);
+                  storage.set(STORAGE_KEY, introMessage);
+                }}
+                sx={{
+                    mr: { xs: "15%", sm: "20%", md: "35%" },
+                }}
+            >
+                Clear Chat
+            </Button>
 
             <IconButton
               onClick={() =>
