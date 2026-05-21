@@ -53,7 +53,6 @@ export default function Home() {
                         sx={{ 
                             maxWidth: 600, 
                             ml: { xs: 0, md: 25 },
-                            width: { xs: "100%", md: "48%" },
                             display: "flex",
                             flexDirection: "column",
                             alignItems: { xs: "center", md: "flex-start" },
