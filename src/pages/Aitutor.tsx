@@ -103,8 +103,6 @@ export default function Aitutor(){
 
                         justifyContent: "space-between",
 
-                        alignItems: "center",
-
                         mb: 2,
                         pb: 2,
                         borderBottom: "1px solid ",
@@ -134,13 +132,14 @@ export default function Aitutor(){
 
                         <Button
                             variant="outlined"
-                            color="error" 
+                            color="error"
                             onClick={() => {
                             setMessages(demoMessages);
                             storage.set(STORAGE_KEY, demoMessages);
                             }}
                             sx={{
                                 ml: { md: "10%" },
+                                p: { xs: 0, md: 2 },
                             }}
                         >
                             Clear Chat
