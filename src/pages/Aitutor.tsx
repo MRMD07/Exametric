@@ -116,6 +116,9 @@ export default function Aitutor(){
                         alignItems: "center",
 
                         mb: 4,
+                        pb: 2,
+                        borderBottom: "1px solid ",
+                        borderColor: "divider",
 
                         gap: 2,
 
@@ -142,7 +145,7 @@ export default function Aitutor(){
                         {/* SUBJECT SELECTOR */}
                         <FormControl
                             sx={{
-                            minWidth: 220,
+                            width: { xs: '45%', md: 300 },
                             }}
                         >
                             <Select
