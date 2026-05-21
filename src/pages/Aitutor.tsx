@@ -120,13 +120,23 @@ export default function Aitutor(){
                         gap: 2,
 
                         flexDirection: {
-                        xs: "column",
-                        sm: "row",
+                        xs: "row",
+                        md: "row",
                         },
                     }}
                     >
-                        <Typography variant="h3">
+                        <Typography 
+                            variant="h4" 
+                            sx={{ display: { xs: 'block', md: 'none' } }}
+                        >
                             AI Tutor
+                        </Typography>
+
+                        <Typography 
+                            variant="h3" 
+                            sx={{ display: { xs: 'none', md: 'block' } }}
+                        >
+                            Artificial Intelligence Tutor
                         </Typography>
 
                         {/* SUBJECT SELECTOR */}
@@ -201,19 +211,11 @@ export default function Aitutor(){
 
                                 borderRadius: 4,
 
-                                bgcolor:
-                                msg.role === "user"
-                                    ? "background.default"
-                                    : "background.default",
+                                bgcolor: "background.default",
 
-                                color:
-                                msg.role === "user"
-                                    ? "text.primary"
-                                    : "text.primary",
+                                color: "text.primary",
 
                                 border: "1px solid",
-
-
                                 borderColor: "text.primary",
                             }}
                             >
