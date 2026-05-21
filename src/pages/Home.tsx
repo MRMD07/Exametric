@@ -45,11 +45,21 @@ export default function Home() {
                         flexDirection: { xs: "column", md: "row" },
                         alignItems: "center",
                         justifyContent: "space-between",
-                        gap: 6,
+                        gap: { xs: 6, md: 4, lg: 8 },
                     }}
                     >
                         {/* LEFT SIDE */}
-                        <Box sx={{ maxWidth: 600, ml: { xs: 0, md: 25 }, }}>
+                        <Box 
+                        sx={{ 
+                            maxWidth: 600, 
+                            ml: { xs: 0, md: 25 },
+                            width: { xs: "100%", md: "48%" },
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: { xs: "center", md: "flex-start" },
+                            justifyContent: "center",
+                        }}
+                        >
                             <Typography
                             sx={{
                                 typography: { xs: "h2", md: "h1" },
