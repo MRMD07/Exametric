@@ -23,13 +23,12 @@ const subjects = [
   "AI",
 ];
 
-const demoMessages = [
+const demoMessages: any[] = [
   {
     role: "user",
     content:
       "Explain the difference between permutations and combinations.",
   },
-
   {
     role: "assistant",
     content: `
@@ -178,10 +177,7 @@ export default function Aitutor(){
 
                         gap: 3,
 
-                        minHeight: {
-                        xs: 500,
-                        md: 650,
-                        },
+                        maxHeight: { xs: 500, md: 500 },
                     }}
                     >
                     {demoMessages.map(
@@ -207,22 +203,18 @@ export default function Aitutor(){
 
                                 bgcolor:
                                 msg.role === "user"
-                                    ? "text.primary"
+                                    ? "background.default"
                                     : "background.default",
 
                                 color:
                                 msg.role === "user"
-                                    ? "background.default"
+                                    ? "text.primary"
                                     : "text.primary",
 
-                                border:
-                                msg.role ===
-                                "assistant"
-                                    ? "1px solid"
-                                    : "none",
+                                border: "1px solid",
 
-                                borderColor:
-                                "divider",
+
+                                borderColor: "text.primary",
                             }}
                             >
                             <ReactMarkdown>
