@@ -39,24 +39,40 @@ export default function Home() {
                 <Box>
                     <Box
                     sx={{
-                        px: { xs: 3, md: 8 },
+                        width: "100%",
+                        maxWidth: "1450px",
+                        mx: "auto",
+
+                        px: { xs: 3, sm: 5, md: 8, lg: 6, xl: 4 },
                         py: { xs: 6, md: 10 },
+
                         display: "flex",
-                        flexDirection: { xs: "column", md: "row" },
+                        flexDirection: { xs: "column", lg: "row" },
+
                         alignItems: "center",
-                        justifyContent: "space-between",
-                        gap: { xs: 6, md: 4, lg: 8 },
+                        justifyContent: "center",
+
+                        gap: {
+                        xs: 6,
+                        md: 8,
+                        lg: 4,
+                        xl: 6,
+                        },
                     }}
                     >
                         {/* LEFT SIDE */}
-                        <Box 
-                        sx={{ 
-                            maxWidth: 600, 
-                            ml: { xs: 0, md: 25 },
+                        <Box
+                        sx={{
+                            flex: 1,
+                            maxWidth: 700,
+
                             display: "flex",
                             flexDirection: "column",
-                            alignItems: { xs: "center", md: "flex-start" },
+                            alignItems: { xs: "center", lg: "flex-start" },
                             justifyContent: "center",
+                            ml: {
+                                xl: 15,
+                            },
                         }}
                         >
                             <Typography
@@ -125,23 +141,31 @@ export default function Home() {
                         </Box>
                         {/* RIGHT SIDE */}
                         <Box
-                            sx={{
-                                minWidth: { md: 200 },
-                                width: { xs: "100%", md: 550 },
-                                bgcolor: "background.paper",
-                                color: "text.primary",
-                                p: {xs: 3, md: 5},
-                                borderRadius: 4,
-                                boxShadow: 3,
-                                border: "1px solid",
-                                borderColor: "divider",
-                                mr: { xs: 0, md: 20 },
-                                maxHeight: { md: 600 }, 
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'flex-start',
-                                overflowY: 'auto',
-                            }}
+                        sx={{
+                            flex: 1.1,
+                            width: "100%",
+                            maxWidth: 720,
+
+                            bgcolor: "background.paper",
+                            color: "text.primary",
+
+                            p: { xs: 3, md: 5 },
+
+                            borderRadius: 4,
+                            boxShadow: 3,
+
+                            border: "1px solid",
+                            borderColor: "divider",
+
+                            display: "flex",
+                            flexDirection: "column",
+
+                            overflowY: "auto",
+
+                            maxHeight: {
+                            lg: "78vh",
+                            },
+                        }}
                         >
                             {/* Title */}
                             <Typography variant="h4" sx={{ mb: 1 }}>
