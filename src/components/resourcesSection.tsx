@@ -81,9 +81,11 @@ export default function PrepareSection() {
               },
 
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              px: { md: 4 },
+              gap: 1,
+              px: {  xs: 2, md: 4 },
 
               bgcolor: "background.default",
               color: "text.primary",
