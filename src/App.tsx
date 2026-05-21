@@ -8,7 +8,7 @@ import Poi from "./pages/Poi.tsx";
 import Poai from "./pages/Poai.tsx";
 import Community from "./pages/Community.tsx";
 import Aitutor from "./pages/Aitutor.tsx";
-import ScrollToTop from "./components/scrollToTop.tsx";
+import { ScrollToTop } from "./components/scroll.tsx";
 
 function App() {
   return (

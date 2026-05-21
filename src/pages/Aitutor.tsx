@@ -171,6 +171,7 @@ export default function Aitutor(){
                     {/* CHAT WINDOW */}
                     <Paper
                     elevation={2}
+                    
                     sx={{
                         flex: 1,
 
