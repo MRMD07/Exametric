@@ -5,6 +5,7 @@ import {
   Select,
   MenuItem,
   FormControl,
+  Button,
   TextField,
   IconButton,
 } from "@mui/material";
@@ -130,6 +131,20 @@ export default function Aitutor(){
                         >
                             Artificial Intelligence Tutor
                         </Typography>
+
+                        <Button
+                            variant="outlined"
+                            color="error" 
+                            onClick={() => {
+                            setMessages(demoMessages);
+                            storage.set(STORAGE_KEY, demoMessages);
+                            }}
+                            sx={{
+                                ml: { md: "10%" },
+                            }}
+                        >
+                            Clear Chat
+                        </Button>
 
                         {/* SUBJECT SELECTOR */}
                         <FormControl
