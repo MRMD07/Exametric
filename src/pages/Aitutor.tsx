@@ -262,6 +262,15 @@ export default function Aitutor(){
                             {
                             borderRadius: 4,
                             },
+                        "& ::-webkit-scrollbar-thumb": {
+                            cursor: "pointer",
+                        },
+                        "& ::-webkit-scrollbar-track": {
+                            cursor: "pointer",
+                        },
+                        "& ::-webkit-scrollbar": {
+                            cursor: "pointer",
+                        },
                         }}
                     />
 
