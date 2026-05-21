@@ -1,37 +1,28 @@
 import ReactMarkdown from "react-markdown";
-import { Box, Typography, Link, List, ListItem } from "@mui/material"
+import { Typography, Link, List, ListItem } from "@mui/material"
 
 export default function MarkdownRenderer({ content }: {content: string}) {
   return (
-    <Box
-      sx={{
-        width: "100%",
-        // 🚀 Limits the horizontal size of the text body to keep it readable
-        maxWidth: "750px", 
-        mx: "auto",
-        lineHeight: 1.6,
-      }}
-    >
       <ReactMarkdown
         children={content}
         components={{
           // 🚀 Shrink H1 Headings
           h1: ({ children }) => (
-            <Typography variant="h4" component="h1" sx={{ fontWeight: "bold", mt: 3, mb: 1.5 }}>
+            <Typography variant="h5" component="h1" sx={{ mt: 2.5, mb: 1 }}>
               {children}
             </Typography>
           ),
           
           // 🚀 Shrink H2 Headings
           h2: ({ children }) => (
-            <Typography variant="h5" component="h2" sx={{ fontWeight: "bold", mt: 2.5, mb: 1 }}>
+            <Typography variant="h6" component="h2" sx={{ mt: 2.5, mb: 1 }}>
               {children}
             </Typography>
           ),
 
           // 🚀 Shrink H3 Headings
           h3: ({ children }) => (
-            <Typography variant="h6" component="h3" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
+            <Typography variant="h6" component="h3" sx={{ mt: 2, mb: 1 }}>
               {children}
             </Typography>
           ),
@@ -39,11 +30,9 @@ export default function MarkdownRenderer({ content }: {content: string}) {
           // 🚀 Screen and Style the Body Text
           p: ({ children }) => (
             <Typography 
-              variant="body2" // 📏 Changes default body1 (16px) to body2 (14px)
+              variant="body1" 
               sx={{ 
-                mb: 2, 
-                color: "text.secondary", 
-                fontSize: { xs: "0.875rem", md: "0.95rem" } // Clean, scaled sizing
+                mb: 2,
               }}
             >
               {children}
@@ -52,7 +41,7 @@ export default function MarkdownRenderer({ content }: {content: string}) {
 
           // Optional: Map your custom MUI links seamlessly
           a: ({ href, children }) => (
-            <Link href={href} target="_blank" underline="hover" sx={{ fontWeight: "bold" }}>
+            <Link href={href} target="_blank" sx={{ fontWeight: "bold" }}>
               {children}
             </Link>
           ),
@@ -61,11 +50,10 @@ export default function MarkdownRenderer({ content }: {content: string}) {
           ul: ({ children }) => <List sx={{ pl: 2, listStyleType: "disc" }}>{children}</List>,
           li: ({ children }) => (
             <ListItem sx={{ display: "list-item", p: 0, mb: 0.5 }}>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>{children}</Typography>
+              <Typography variant="body2">{children}</Typography>
             </ListItem>
           )
         }}
       />
-    </Box>
   );
 }
