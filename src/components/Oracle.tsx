@@ -11,15 +11,15 @@ import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CloseIcon from "@mui/icons-material/Close";
 import SendIcon from "@mui/icons-material/Send";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MarkdownRenderer from "./renderMarkdown";
 import { storage}  from "./localStorage";
 
 const introMessage = [
   {
     role: "assistant",
-    content:
-      "Hello. I am the **Oracle**. Ask anything related to olympiads, preparation, or concepts.",
+        content:
+        "Hello. I am the **Oracle**. Ask anything related to olympiads, preparation, or concepts.",
   },
 ];
 
@@ -29,6 +29,10 @@ export default function Oracle() {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState(() => storage.get(STORAGE_KEY, introMessage));
+
+  useEffect(() => {
+    storage.set(STORAGE_KEY, messages);
+  }, [messages]);
 
   function handleSend() {
     if (!message.trim()) return;
@@ -40,7 +44,6 @@ export default function Oracle() {
     ].slice(-10)); // Keep only the last 10 messages for context
 
     setMessage("");
-    storage.set(STORAGE_KEY, messages);
   }
 
   return (
