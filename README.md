@@ -20,9 +20,9 @@ Written in React and Typescript. Backend is written in [python](https://github.c
 ## 🚀 Key Features
 
 * **Olympiad Oracle:** A highly trained AI routing assistant capable of filtering educational inputs and mapping specific student inquiries to curated subject guides.
-* **AI Master Tutor Engine:** A stateful, programmatic tutoring environment that guides students through theory, step-by-step example walks, interactive concept checks, and elite final NSTC-level tests.
-* **Community Resource Board:** A real-time hub allowing decentralized crowdsourcing of past papers, conceptual cheat sheets, and peer study links.
-* **Data Analytics Pipeline (Coming Soon):** An independent statistical processor powered by **NumPy** and **Pandas** to calculate subject-density matrix metrics and engagement tracking.
+* **AI Master Tutor Engine:** A stateful, programmatic tutoring environment that guides students through theory, step by step example walks, interactive concept checks, and elite final NSTC-level tests.
+* **Community Resource Board:** A real time hub allowing decentralized crowdsourcing of past papers, conceptual cheat sheets, and peer study links.
+
 ---
 
 ## Contribution
