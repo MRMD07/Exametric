@@ -69,7 +69,7 @@ export default function Home() {
                             EXAMETRIC
                             </Typography>
 
-                            <Typography sx={{ mb: 4, typography: { xs: "h6", md: "h5" } }}>
+                            <Typography variant= "h5" sx={{ mb: 4 }}>
                             NSTC Preparation. <br />
                             AI Assisted Learning. <br />
                             NSTC Syllabuses. <br />
