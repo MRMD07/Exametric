@@ -10,7 +10,7 @@ const subjects = [
   { title: "NPTC", desc: "Entry test for International Physics Olympiad", route: "/nptc" },
   { title: "NCTC", desc: "Entry test for International Chemistry Olympiad", route: "/nctc" },
   { title: "NBTC", desc: "Entry test for International Biology Olympiad", route: "/nbtc" },
-  { title: "POI", desc: "Entry test for International Olympiad in Infomatics", route: "/poi" },
+  { title: "POI", desc: "Entry test for International Olympiad in Informatics", route: "/poi" },
   { title: "POAI", desc: "Entry test for International Olympiad in Artificial Intelligence", route: "/poai" },
   { title: "Community Resources", desc: "", route: "/community-resources" },
   { title: "AI Tutor", desc: "AI teacher that answers all subject related questions", route: "/ai-tutor" },
