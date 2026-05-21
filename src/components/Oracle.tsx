@@ -13,8 +13,9 @@ import SendIcon from "@mui/icons-material/Send";
 
 import { useState } from "react";
 import MarkdownRenderer from "./renderMarkdown";
+import { storage}  from "./localStorage";
 
-const demoMessages = [
+const introMessage = [
   {
     role: "assistant",
     content:
@@ -22,10 +23,12 @@ const demoMessages = [
   },
 ];
 
+const STORAGE_KEY = "chat_messages";
+
 export default function Oracle() {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState(demoMessages);
+  const [messages, setMessages] = useState(() => storage.get(STORAGE_KEY, introMessage));
 
   function handleSend() {
     if (!message.trim()) return;
@@ -34,8 +37,10 @@ export default function Oracle() {
     setMessages((prev) => [
       ...prev,
       { role: "user", content: message },
-    ]);
+    ].slice(-10)); // Keep only the last 10 messages for context
+
     setMessage("");
+    storage.set(STORAGE_KEY, messages);
   }
 
   return (
@@ -237,6 +242,7 @@ export default function Oracle() {
             />
 
             <IconButton
+              onClick={handleSend}
               sx={{
                 width: 52,
                 height: 52,
@@ -246,7 +252,7 @@ export default function Oracle() {
                   "divider",
               }}
             >
-              <SendIcon onClick={handleSend} />
+              <SendIcon />
             </IconButton>
           </Box>
         </Paper>
