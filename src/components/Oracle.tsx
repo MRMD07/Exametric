@@ -23,15 +23,11 @@ const demoMessages = [
 ];
 
 export default function Oracle() {
-  const [open, setOpen] =
-    useState(false);
+  const [open, setOpen] = useState(false);
 
-  const [message, setMessage] =
-    useState("");
+  const [message, setMessage] = useState("");
 
-  const [messages] = useState(
-    demoMessages
-  );
+  const [messages] = useState(demoMessages);
 
   return (
     <>
@@ -70,16 +66,18 @@ export default function Oracle() {
             position: "fixed",
 
             bottom: 24,
-            right: 24,
+            right: 15,
 
             width: {
               xs: "calc(100vw - 32px)",
-              sm: 400,
+              sm: 350,
+              md: 400,
             },
 
             height: {
               xs: "75vh",
-              sm: 650,
+              sm: "75vh",
+              md: 650,
             },
 
             borderRadius: 5,
