@@ -72,7 +72,7 @@ export default function PrepareSection() {
             key={subject.title}
             onClick={() => navigate(subject.route) }
             sx={{
-              height: { xs: "fit-content", md: 150 },
+              height: { xs: 135, md: 150 },
               borderRadius: 5,
               cursor: "pointer",
               
@@ -102,9 +102,9 @@ export default function PrepareSection() {
             }}
           >
             <Typography
-              variant="h4"
               sx={{
                 letterSpacing: "0.03em",
+                typography: { xs: "h4", md: "h3" },
                 textAlign: "center",
               }}
             >
