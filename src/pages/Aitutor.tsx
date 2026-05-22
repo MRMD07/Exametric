@@ -93,7 +93,7 @@ export default function Aitutor(){
         if (paperRef.current) {
           paperRef.current.scrollTop = paperRef.current.scrollHeight;
         }
-    }, [messages]);
+    }, [messages, subject]);
 
     useEffect(() => {
         storage.set(STORAGE_KEY, messages);
@@ -146,6 +146,8 @@ export default function Aitutor(){
         assistantMessage,
         ].slice(-10),
     }));
+
+    setLoading(false);
     }
 
     return(
@@ -212,7 +214,7 @@ export default function Aitutor(){
                             variant="outlined"
                             color="error"
                             onClick={() => {
-                            messages[subject] = initialMessages[subject];
+                            setMessages(initialMessages);
                             storage.set(STORAGE_KEY, initialMessages);
                             }}
                             sx={{
