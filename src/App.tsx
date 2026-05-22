@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import Nmtc from "./pages/Nmtc.tsx";
 import Nptc from "./pages/Nptc.tsx";
@@ -12,10 +12,12 @@ import { ScrollToTop } from "./components/scroll.tsx";
 import Oracle from "./components/Oracle.tsx";
 import NotFound from "./pages/notFound.tsx";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Oracle />
+function AppContent(){
+  const location = useLocation();
+  const hideOracle = location.pathname === "/ai-tutor";
+
+  return(
+    <>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,6 +32,15 @@ function App() {
         <Route path="/ai-tutor" element={<Aitutor/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      {!hideOracle && <Oracle />}
+    </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
