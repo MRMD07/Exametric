@@ -32,7 +32,7 @@ export default function Oracle() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState(() => storage.get(STORAGE_KEY, introMessage));
+  const [messages, setMessages] = useState<any[]>(() => storage.get(STORAGE_KEY, introMessage));
   const paperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
