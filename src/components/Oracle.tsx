@@ -211,17 +211,9 @@ export default function Oracle() {
 
                       borderRadius: 4,
 
-                      bgcolor:
-                        msg.role ===
-                        "user"
-                          ? "text.primary"
-                          : "background.default",
+                      bgcolor: "background.default",
 
-                      color:
-                        msg.role ===
-                        "user"
-                          ? "background.default"
-                          : "text.primary",
+                      color: "text.primary",
 
                       border:
                         msg.role ===

@@ -32,7 +32,7 @@ export default function MarkdownRenderer({ content }: {content: string}) {
             <Typography 
               variant="body1" 
               sx={{ 
-                mb: 2,
+                mb: 0.5,
               }}
             >
               {children}
