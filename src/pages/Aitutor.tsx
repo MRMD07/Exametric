@@ -28,17 +28,65 @@ const subjects = [
   "AI",
 ];
 
-const demoMessages: any[] = [
+type SubjectChats = {
+  [key: string]: any[];
+};
+
+const initialMessages: SubjectChats = {
+  Math: [
     {
-        role: "assistant",
-        content: `Hello! I am your AI tutor. Ask me anything related to ${subjects.join(", ")} and I'll do my best to help you out!`,
+      role: "assistant",
+      content:
+        "Hello! I am your AI tutor. Ask me anything related to Math.",
     },
-];
+  ],
+
+  Biology: [
+    {
+      role: "assistant",
+      content:
+        "Hello! I am your AI tutor. Ask me anything related to Biology.",
+    },
+  ],
+
+  Physics: [
+    {
+      role: "assistant",
+      content:
+        "Hello! I am your AI tutor. Ask me anything related to Physics.",
+    },
+  ],
+
+  Chemistry: [
+    {
+      role: "assistant",
+      content:
+        "Hello! I am your AI tutor. Ask me anything related to Chemistry.",
+    },
+  ],
+
+  Informatics: [
+    {
+      role: "assistant",
+      content:
+        "Hello! I am your AI tutor. Ask me anything related to Informatics.",
+    },
+  ],
+
+  AI: [
+    {
+      role: "assistant",
+      content:
+        "Hello! I am your AI tutor. Ask me anything related to AI.",
+    },
+  ],
+};
 
 export default function Aitutor(){
     const [subject, setSubject] = useState("Math");
-    const [message, setMessage] = useState("");
-    const [messages, setMessages] = useState(() => storage.get(STORAGE_KEY, demoMessages));
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");   
+    const [messages, setMessages] = useState<SubjectChats>(() => { return storage.get(STORAGE_KEY,initialMessages); });
     const paperRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -52,21 +100,52 @@ export default function Aitutor(){
     }, [messages]);
 
     async function handleSend() {
-        if (!message.trim()) return;
+    if (!message.trim()) return;
+    if (loading) return;
+    
+    setLoading(true);
 
-        // 1. Add the user's message to the chat
-        setMessages((prev) => [
-            ...prev,
-            { role: "user", content: message },
-        ].slice(-10)); // Keep only the last 10 messages for context
+    const userMessage = {
+        role: "user" as const,
+        content: message,
+    };
 
-        setMessage("");
-        const resp = await getAI(messages, 2);
+    // Build updated subject chat
+    const updatedChat = [
+        ...(messages[subject] || []),
+        userMessage,
+    ].slice(-10);
 
-        setMessages((prev) => [
+    // Update UI immediately
+    setMessages((prev) => ({
         ...prev,
-        { role: "assistant", content: resp }
-        ].slice(-10));
+
+        [subject]: updatedChat,
+    }));
+
+    setMessage("");
+
+    // AI CALL
+    const resp = await getAI(
+        updatedChat,
+        2,
+        subject
+    );
+
+    const assistantMessage = {
+        role: "assistant" as const,
+        content: resp,
+    };
+
+    // Add AI response
+    setMessages((prev) => ({
+        ...prev,
+
+        [subject]: [
+        ...(prev[subject] || []),
+        assistantMessage,
+        ].slice(-10),
+    }));
     }
 
     return(
@@ -133,8 +212,8 @@ export default function Aitutor(){
                             variant="outlined"
                             color="error"
                             onClick={() => {
-                            setMessages(demoMessages);
-                            storage.set(STORAGE_KEY, demoMessages);
+                            messages[subject] = initialMessages[subject];
+                            storage.set(STORAGE_KEY, initialMessages);
                             }}
                             sx={{
                                 ml: { md: "10%" },
@@ -212,7 +291,7 @@ export default function Aitutor(){
                         maxHeight: { xs: 400, md: 450 },
                     }}
                     >
-                    {messages.map(
+                    {messages[subject]?.map(
                         (msg, index) => (
                         <Box
                             key={index}
