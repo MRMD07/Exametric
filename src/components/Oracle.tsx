@@ -45,30 +45,54 @@ export default function Oracle() {
     storage.set(STORAGE_KEY, messages);
   }, [messages]);
 
-  async function handleSend() {
-    if (!message.trim()) return;
-    if (loading) return;
+async function handleSend() {
+  if (!message.trim()) return;
+  if (loading) return;
 
-    setLoading(true);
+  setLoading(true);
 
-    // 1. Add the user's message to the chat
-    setMessages((prev) => [
-      ...prev,
-      { role: "user", content: message, loading: false },
-      { role: "assistant", content: "", loading: true },
-    ].slice(-5)); // Keep only the last 5 messages for context
+  const userMessage = {
+    role: "user" as const,
+    content: message,
+  };
 
-    setMessage("");
+  const loadingMessage = {
+    role: "assistant" as const,
+    content: "",
+    loading: true,
+  };
 
-    const resp = await getAI(messages, 1);
+  // Build updated chat FIRST
+  const updatedMessages = [
+    ...messages,
+    userMessage,
+    loadingMessage,
+  ].slice(-5);
 
-    setMessages((prev) => [
-      ...prev,
-      prev.filter((msg) => !msg.loading).concat({ role: "assistant", content: resp, loading: false }),
-    ].slice(-5));
+  // Instant UI update
+  setMessages(updatedMessages);
 
-    setLoading(false);
-  }
+  setMessage("");
+
+  // remove loading bubble before sending context
+  const resp = await getAI( [...messages, userMessage], 1);
+
+  // REPLACE loading bubble
+  setMessages((prev) =>
+    prev
+      .filter((msg) => !msg.loading)
+
+      .concat({
+        role: "assistant",
+        content: resp,
+      })
+
+      .slice(-5)
+  );
+
+  setLoading(false);
+
+}
 
   return (
     <>
