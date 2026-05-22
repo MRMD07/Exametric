@@ -132,19 +132,26 @@ export default function Aitutor(){
                             }}
                             sx={{
                                 ml: { md: "10%" },
-                                p: { xs: 0, md: 2 },
+                                p: { xs: 2.5, md: 2 },
                                 height: { xs: 40, md: "fit-content" },
                                 alignSelf: "center",
                             }}
                         >
-                            Clear Chat
+                            Clear
                         </Button>
 
                         <Typography 
                             variant="h4" 
-                            sx={{ display: { xs: 'block', md: 'none' } }}
+                            sx={{ 
+                                display: { xs: 'flex', md: 'none' },
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                gap: 1,
+                         }}
                         >
-                            AI Tutor
+                            <span>AI</span>
+                            <span>Tutor</span>
                         </Typography>
 
                         {/* SUBJECT SELECTOR */}
@@ -194,8 +201,9 @@ export default function Aitutor(){
                         flexDirection: "column",
 
                         gap: 1,
+                        minHeight: 350,
 
-                        height: { xs: 450, md: 450 },
+                        maxHeight: { xs: 400, md: 450 },
                     }}
                     >
                     {messages.map(
