@@ -10,6 +10,7 @@ import Community from "./pages/Community.tsx";
 import Aitutor from "./pages/Aitutor.tsx";
 import { ScrollToTop } from "./components/scroll.tsx";
 import Oracle from "./components/Oracle.tsx";
+import NotFound from "./pages/notFound.tsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/poai" element={<Poai />} />
         <Route path="/community-resources" element={<Community />} />
         <Route path="/ai-tutor" element={<Aitutor/>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
