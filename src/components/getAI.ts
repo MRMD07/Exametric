@@ -5,7 +5,7 @@ export default async function getAI(context: any[], id: number = 1) {
             headers: { 'Content-Type': 'application/json' },
 
             // IMPORTANT: send full context
-            body: JSON.stringify({ message: context, id })
+            body: JSON.stringify({ message: context, bot_id: id })
         });
         const data = await response.json();
         if (data.reply) {

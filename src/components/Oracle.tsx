@@ -54,7 +54,7 @@ export default function Oracle() {
 
     setMessage("");
 
-    const resp = await getAI(messages);
+    const resp = await getAI(messages, 1);
 
     setMessages((prev) => [
       ...prev,
