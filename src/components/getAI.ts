@@ -8,9 +8,12 @@ export default async function getAI(context: any[]) {
             body: JSON.stringify({ message: context })
         });
         const data = await response.json();
-        return data;
+        if (data.reply) {
+            return data.reply;
+        } else {
+            return data.error || 'No reply from AI';
+        }
     } catch (error) {
-        console.error('Error fetching AI response:', error);
-        throw error;
+        return 'Error communicating with AI';
     }
 }

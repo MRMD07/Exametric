@@ -15,6 +15,7 @@ import SendIcon from "@mui/icons-material/Send";
 import { useState, useEffect, useRef } from "react";
 import MarkdownRenderer from "./renderMarkdown";
 import { storage}  from "./localStorage";
+import getAI from "./getAI";
 
 const introMessage = [
   {
@@ -42,17 +43,25 @@ export default function Oracle() {
     storage.set(STORAGE_KEY, messages);
   }, [messages]);
 
-  function handleSend() {
+  async function handleSend() {
     if (!message.trim()) return;
 
     // 1. Add the user's message to the chat
     setMessages((prev) => [
       ...prev,
       { role: "user", content: message },
-      { role: "assistant", content: `This is a demo response. The actual AI response functionality is not implemented yet.` },
     ].slice(-10)); // Keep only the last 10 messages for context
 
     setMessage("");
+    
+    const resp = await getAI(messages);
+
+    setMessages((prev) => [
+      ...prev,
+      { role: "assistant", content: resp }
+    ]);
+
+    
   }
 
   return (
