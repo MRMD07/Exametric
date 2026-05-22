@@ -117,13 +117,6 @@ export default function Aitutor(){
                     }}
                     >
                         <Typography 
-                            variant="h4" 
-                            sx={{ display: { xs: 'block', md: 'none' } }}
-                        >
-                            AI Tutor
-                        </Typography>
-
-                        <Typography 
                             variant="h3" 
                             sx={{ display: { xs: 'none', md: 'block' } }}
                         >
@@ -140,15 +133,25 @@ export default function Aitutor(){
                             sx={{
                                 ml: { md: "10%" },
                                 p: { xs: 0, md: 2 },
+                                height: { xs: 40, md: "fit-content" },
+                                alignSelf: "center",
                             }}
                         >
                             Clear Chat
                         </Button>
 
+                        <Typography 
+                            variant="h4" 
+                            sx={{ display: { xs: 'block', md: 'none' } }}
+                        >
+                            AI Tutor
+                        </Typography>
+
                         {/* SUBJECT SELECTOR */}
                         <FormControl
                             sx={{
                             width: { xs: '45%', md: 300 },
+                            alignSelf: "center",
                             }}
                         >
                             <Select
@@ -192,7 +195,7 @@ export default function Aitutor(){
 
                         gap: 1,
 
-                        maxHeight: { xs: 350, md: 450 },
+                        height: { xs: 450, md: 450 },
                     }}
                     >
                     {messages.map(
