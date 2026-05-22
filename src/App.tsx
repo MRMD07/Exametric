@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./pages/Home.tsx";
 import Nmtc from "./pages/Nmtc.tsx";
 import Nptc from "./pages/Nptc.tsx";
@@ -15,6 +16,11 @@ import NotFound from "./pages/notFound.tsx";
 function AppContent(){
   const location = useLocation();
   const hideOracle = location.pathname === "/ai-tutor";
+  useEffect(() => {
+    fetch(
+      "https://olympiad-oracle-backend-pwg031w7l-mrmd07s-projects.vercel.app"
+    ).catch(() => {});
+  }, []);
 
   return(
     <>
