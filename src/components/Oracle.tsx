@@ -16,6 +16,7 @@ import { useState, useEffect, useRef } from "react";
 import MarkdownRenderer from "./renderMarkdown";
 import { storage}  from "./localStorage";
 import getAI from "./getAI";
+import LoadingIndicator from "./loading";
 
 const introMessage = [
   {
@@ -53,7 +54,8 @@ export default function Oracle() {
     // 1. Add the user's message to the chat
     setMessages((prev) => [
       ...prev,
-      { role: "user", content: message },
+      { role: "user", content: message, loading: false },
+      { role: "assistant", content: "", loading: true },
     ].slice(-5)); // Keep only the last 5 messages for context
 
     setMessage("");
@@ -62,7 +64,7 @@ export default function Oracle() {
 
     setMessages((prev) => [
       ...prev,
-      { role: "assistant", content: resp }
+      prev.filter((msg) => !msg.loading).concat({ role: "assistant", content: resp, loading: false }),
     ].slice(-5));
 
     setLoading(false);
@@ -229,7 +231,11 @@ export default function Oracle() {
                         "divider",
                     }}
                   >
-                     <MarkdownRenderer content={msg.content} />
+                     {msg.loading ? (
+                      <LoadingIndicator />
+                    ) : (
+                      <MarkdownRenderer content={msg.content} />
+                    )}
                   </Paper>
                 </Box>
               )

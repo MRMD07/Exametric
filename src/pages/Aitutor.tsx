@@ -16,6 +16,7 @@ import Footer from "../components/footer";
 import MarkdownRenderer from "../components/renderMarkdown";
 import { storage}  from "../components/localStorage";
 import getAI from "../components/getAI";
+import LoadingIndicator from "../components/loading";
 
 const STORAGE_KEY = "aitutor_messages";
 
@@ -102,7 +103,7 @@ export default function Aitutor(){
     async function handleSend() {
     if (!message.trim()) return;
     if (loading) return;
-    
+
     setLoading(true);
 
     const userMessage = {
@@ -110,41 +111,46 @@ export default function Aitutor(){
         content: message,
     };
 
-    // Build updated subject chat
-    const updatedChat = [
-        ...(messages[subject] || []),
-        userMessage,
-    ].slice(-5);
-
-    // Update UI immediately
-    setMessages((prev) => ({
-        ...prev,
-
-        [subject]: updatedChat,
-    }));
-
-    setMessage("");
-
-    // AI CALL
-    const resp = await getAI(
-        updatedChat,
-        2,
-        subject
-    );
-
-    const assistantMessage = {
+    const loadingMessage = {
         role: "assistant" as const,
-        content: resp,
+        content: "",
+        loading: true,
     };
 
-    // Add AI response
+    // INSTANT UI UPDATE
     setMessages((prev) => ({
         ...prev,
 
         [subject]: [
         ...(prev[subject] || []),
-        assistantMessage,
-        ].slice(-5), // Keep only the last 5 messages for context
+
+        userMessage,
+
+        loadingMessage,
+        ].slice(-5),
+    }));
+
+    setMessage("");
+
+    const resp = await getAI(
+    [...messages[subject], userMessage],
+    2,
+    subject
+    );
+
+    // REPLACE LOADING MESSAGE
+    setMessages((prev) => ({
+    ...prev,
+
+    [subject]: prev[subject]
+        .filter((msg) => !msg.loading)
+
+        .concat({
+        role: "assistant",
+        content: resp,
+        })
+
+        .slice(-5),
     }));
 
     setLoading(false);
@@ -325,7 +331,11 @@ export default function Aitutor(){
                                 borderColor: "divider",
                             }}
                             >
-                                <MarkdownRenderer content={msg.content} />
+                                {msg.loading ? (
+                                    <LoadingIndicator />
+                                ) : (
+                                    <MarkdownRenderer content={msg.content} />
+                                )}
                             </Paper>
                         </Box>
                         )
