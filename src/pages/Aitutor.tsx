@@ -15,6 +15,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import MarkdownRenderer from "../components/renderMarkdown";
 import { storage}  from "../components/localStorage";
+import getAI from "../components/getAI";
 
 const STORAGE_KEY = "aitutor_messages";
 
@@ -50,17 +51,22 @@ export default function Aitutor(){
         storage.set(STORAGE_KEY, messages);
     }, [messages]);
 
-    function handleSend() {
+    async function handleSend() {
         if (!message.trim()) return;
 
         // 1. Add the user's message to the chat
         setMessages((prev) => [
             ...prev,
             { role: "user", content: message },
-            { role: "assistant", content: `This is a demo response. The actual AI response functionality is not implemented yet.` },
         ].slice(-10)); // Keep only the last 10 messages for context
 
         setMessage("");
+        const resp = await getAI(messages, 2);
+
+        setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: resp }
+        ].slice(-10));
     }
 
     return(

@@ -59,7 +59,7 @@ export default function Oracle() {
     setMessages((prev) => [
       ...prev,
       { role: "assistant", content: resp }
-    ]);
+    ].slice(-10));
 
     
   }

@@ -1,11 +1,11 @@
-export default async function getAI(context: any[]) {
+export default async function getAI(context: any[], id: number = 1) {
     try {
         const response = await fetch('https://olympiad-oracle-backend-pwg031w7l-mrmd07s-projects.vercel.app/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
 
             // IMPORTANT: send full context
-            body: JSON.stringify({ message: context })
+            body: JSON.stringify({ message: context, id })
         });
         const data = await response.json();
         if (data.reply) {
