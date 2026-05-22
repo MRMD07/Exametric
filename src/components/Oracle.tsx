@@ -37,7 +37,7 @@ export default function Oracle() {
     if (paperRef.current) {
       paperRef.current.scrollTop = paperRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [open, messages]);
 
   useEffect(() => {
     storage.set(STORAGE_KEY, messages);
@@ -53,7 +53,7 @@ export default function Oracle() {
     ].slice(-10)); // Keep only the last 10 messages for context
 
     setMessage("");
-    
+
     const resp = await getAI(messages);
 
     setMessages((prev) => [
