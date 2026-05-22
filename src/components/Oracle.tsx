@@ -29,6 +29,7 @@ const STORAGE_KEY = "myList";
 
 export default function Oracle() {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState(() => storage.get(STORAGE_KEY, introMessage));
   const paperRef = useRef<HTMLDivElement | null>(null);
@@ -45,12 +46,15 @@ export default function Oracle() {
 
   async function handleSend() {
     if (!message.trim()) return;
+    if (loading) return;
+
+    setLoading(true);
 
     // 1. Add the user's message to the chat
     setMessages((prev) => [
       ...prev,
       { role: "user", content: message },
-    ].slice(-10)); // Keep only the last 10 messages for context
+    ].slice(-5)); // Keep only the last 5 messages for context
 
     setMessage("");
 
@@ -59,9 +63,9 @@ export default function Oracle() {
     setMessages((prev) => [
       ...prev,
       { role: "assistant", content: resp }
-    ].slice(-10));
+    ].slice(-5));
 
-    
+    setLoading(false);
   }
 
   return (

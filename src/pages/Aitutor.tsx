@@ -114,7 +114,7 @@ export default function Aitutor(){
     const updatedChat = [
         ...(messages[subject] || []),
         userMessage,
-    ].slice(-10);
+    ].slice(-5);
 
     // Update UI immediately
     setMessages((prev) => ({
@@ -144,7 +144,7 @@ export default function Aitutor(){
         [subject]: [
         ...(prev[subject] || []),
         assistantMessage,
-        ].slice(-10),
+        ].slice(-5), // Keep only the last 5 messages for context
     }));
 
     setLoading(false);
