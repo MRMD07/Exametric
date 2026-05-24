@@ -84,7 +84,7 @@ const initialMessages: SubjectChats = {
 };
 
 export default function Aitutor(){
-    const [subject, setSubject] = useState("Math");
+    const [subject, setSubject] = useState(()=> {return localStorage.getItem("aitutor_subject") || "Math";});
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");   
     const [messages, setMessages] = useState<SubjectChats>(() => { return storage.get(STORAGE_KEY,initialMessages); });
@@ -94,6 +94,7 @@ export default function Aitutor(){
         if (paperRef.current) {
           paperRef.current.scrollTop = paperRef.current.scrollHeight;
         }
+        localStorage.setItem("aitutor_subject", subject);
     }, [messages, subject]);
 
     useEffect(() => {
