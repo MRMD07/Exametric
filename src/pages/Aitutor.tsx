@@ -127,13 +127,13 @@ export default function Aitutor(){
         userMessage,
 
         loadingMessage,
-        ].slice(-5),
+        ].slice(-25),
     }));
 
     setMessage("");
 
     const resp = await getAI(
-    [...messages[subject], userMessage],
+    [...messages[subject].slice(-5), userMessage],
     2,
     subject
     );
@@ -150,7 +150,7 @@ export default function Aitutor(){
         content: resp,
         })
 
-        .slice(-5),
+        .slice(-25),
     }));
 
     setLoading(false);
