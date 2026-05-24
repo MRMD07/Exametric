@@ -23,7 +23,7 @@ function AppContent(){
 
   useEffect(() => {
     fetch(
-      "https://olympiad-oracle-backend-pwg031w7l-mrmd07s-projects.vercel.app"
+      "https://olympiad-oracle-backend.vercel.app"
     ).catch(() => {});
 
     async function fetchResources() {
