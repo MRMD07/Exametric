@@ -299,10 +299,19 @@ async function handleSend() {
               }
 
               sx={{
-                "& .MuiOutlinedInput-root":
+              "& .MuiOutlinedInput-root":
                   {
-                    borderRadius: 3,
+                  borderRadius: 3,
                   },
+              "& ::-webkit-scrollbar-thumb": {
+                  cursor: "pointer",
+              },
+              "& ::-webkit-scrollbar-track": {
+                  cursor: "pointer",
+              },
+              "& ::-webkit-scrollbar": {
+                  cursor: "pointer",
+              },
               }}
             />
 
