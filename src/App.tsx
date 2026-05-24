@@ -12,8 +12,9 @@ import Aitutor from "./pages/Aitutor.tsx";
 import { ScrollToTop } from "./components/scroll.tsx";
 import Oracle from "./components/Oracle.tsx";
 import NotFound from "./pages/notFound.tsx";
-import { supabaseClient } from "./components/supabase";
-import { type Resource } from "./components/ResourceCard";
+import { supabaseClient } from "./components/supabase.ts";
+import { type Resource } from "./components/ResourceCard.tsx";
+import AnalyticsTracker from "./components/AnalyticsTracker.tsx";
 
 
 function AppContent(){
@@ -69,6 +70,7 @@ function AppContent(){
 function App() {
   return (
     <BrowserRouter>
+      <AnalyticsTracker />
       <AppContent />
     </BrowserRouter>
   );
