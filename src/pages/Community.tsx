@@ -5,7 +5,7 @@ import {
     InputAdornment,
     Button,
  } from "@mui/material";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import Navbar from "../components/navbar";
@@ -14,40 +14,15 @@ import FilterModal from "../components/Filter";
 import UploadModal from "../components/Upload";
 import { type Resource } from "../components/ResourceCard";
 import ResourceList from "../components/ResourceList";
-import { supabaseClient } from "../components/supabase";
 
-
-export default function Community(){
+export default function Community({resource}: {resource: Resource[]} ){
     const [filterOpen, setFilterOpen] = useState(false);
     const [uploadOpen, setUploadOpen] = useState(false);
     const [search, setSearch] = useState("");
     const [selectedSubject, setSelectedSubject] = useState("");
-    const [resource, setResource] = useState<Resource[]>([]);
-
-    useEffect(() => {
-        async function fetchResources() {
-            try {
-                const { data, error } = await supabaseClient.from("resources").select("*").order("created_at", { ascending: false });
-
-                if (error) {
-                    console.error("Error fetching resources:", error);
-                    return;
-                }
-
-                if (data) {
-                    setResource(data as Resource[]);
-                }
-
-            } catch (error) {
-                console.error("Unexpected error:", error);
-            }
-        }
-
-        fetchResources();
-    }, []);
 
     const filteredResources = useMemo(() => {
-        return resource.filter((item) => {
+        return resource.filter((item: Resource) => {
 
             const matchesSearch =
                 item.title
