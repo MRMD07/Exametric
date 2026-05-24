@@ -101,6 +101,25 @@ export default function Aitutor(){
         storage.set(STORAGE_KEY, messages);
     }, [messages]);
 
+    useEffect(() => {
+        const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+            if (loading) {
+            e.preventDefault();
+
+            e.returnValue = "";
+            }
+        };
+
+        window.addEventListener("beforeunload",handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener(
+            "beforeunload",
+            handleBeforeUnload
+            );
+        };
+    }, [loading]);
+
     async function handleSend() {
     if (!message.trim()) return;
     if (loading) return;
