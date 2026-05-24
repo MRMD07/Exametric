@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home.tsx";
 import Nmtc from "./pages/Nmtc.tsx";
@@ -17,8 +17,6 @@ import { type Resource } from "./components/ResourceCard";
 
 
 function AppContent(){
-  const location = useLocation();
-  const hideOracle = location.pathname === "/ai-tutor";
   const [resource, setResource] = useState<Resource[]>([]);
 
   useEffect(() => {
@@ -63,7 +61,7 @@ function AppContent(){
         <Route path="/ai-tutor" element={<Aitutor/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {!hideOracle && <Oracle />}
+      <Oracle />
     </>
   )
 }

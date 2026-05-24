@@ -11,6 +11,7 @@ import {
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CloseIcon from "@mui/icons-material/Close";
 import SendIcon from "@mui/icons-material/Send";
+import { useLocation } from "react-router-dom"
 
 import { useState, useEffect, useRef } from "react";
 import MarkdownRenderer from "./renderMarkdown";
@@ -34,12 +35,20 @@ export default function Oracle() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<any[]>(() => storage.get(STORAGE_KEY, introMessage));
   const paperRef = useRef<HTMLDivElement | null>(null);
+  const location = useLocation();
+  const hideOracle = "/ai-tutor";
 
   useEffect(() => {
     if (paperRef.current) {
       paperRef.current.scrollTop = paperRef.current.scrollHeight;
     }
   }, [open, messages]);
+
+  useEffect(() => {
+    if (location.pathname == hideOracle) {
+      setOpen(false)
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     storage.set(STORAGE_KEY, messages);
@@ -97,7 +106,7 @@ async function handleSend() {
   return (
     <>
       {/* FLOATING BUTTON */}
-      {!open && (
+      {!open && !(location.pathname == hideOracle) && (
         <Fab
           onClick={() => setOpen(true)}
           sx={{
