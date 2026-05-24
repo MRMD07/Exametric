@@ -67,7 +67,7 @@ async function handleSend() {
     ...messages,
     userMessage,
     loadingMessage,
-  ].slice(-5);
+  ].slice(-25);
 
   // Instant UI update
   setMessages(updatedMessages);
@@ -75,7 +75,7 @@ async function handleSend() {
   setMessage("");
 
   // remove loading bubble before sending context
-  const resp = await getAI( [...messages, userMessage], 1);
+  const resp = await getAI( [...messages.slice(-5), userMessage], 1);
 
   // REPLACE loading bubble
   setMessages((prev) =>
@@ -87,7 +87,7 @@ async function handleSend() {
         content: resp,
       })
 
-      .slice(-5)
+      .slice(-25)
   );
 
   setLoading(false);
