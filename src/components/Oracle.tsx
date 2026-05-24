@@ -240,6 +240,9 @@ async function handleSend() {
                       py: 1.5,
 
                       borderRadius: 4,
+                      width: "fit-content",
+                      maxWidth: "100%",
+                      overflowWrap: "break-word",
 
                       bgcolor: "background.default",
 
