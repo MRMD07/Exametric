@@ -1,6 +1,6 @@
 export default async function getAI(context: any[], id: number = 1, subject: string = "") {
     try {
-        const response = await fetch('https://olympiad-oracle-backend.vercel.app/chat', {
+        const response = await fetch('https://olympiad-oracle-backend-pwg031w7l-mrmd07s-projects.vercel.app/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
 
